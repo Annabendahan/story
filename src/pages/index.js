@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import mi from "../images/miself.png"
-import foot1 from "../images/foot1.png"
+import foot9 from "../images/foot9.png"
 import foot3 from "../images/foot3.png"
 import foot5 from "../images/foot5.png"
 import foot4 from "../images/foot4.png"
@@ -534,7 +534,7 @@ class IndexPage extends Component {
                 {this.state.step === 31 ||
                 this.state.step === 32 ||
                 this.state.step === 33 ? (
-                  <img src={foot4} alt="mi" />
+                  <img src={foot9} alt="mi" />
                 ) : null}
                 {this.state.step === 32 || this.state.step === 33 ? (
                   <img src={foot5} alt="mi" />
