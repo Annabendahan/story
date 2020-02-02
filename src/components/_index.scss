@@ -73,7 +73,7 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  height: 400px;
+  height: 360px;
   @include breakpoint(s) {
     height: 600px;
   }
@@ -91,9 +91,16 @@
 }
 
 .arrow {
-  transform: rotate(90deg);
+  display: none;
   @include breakpoint(m) {
-    transform: rotate(0deg);
+    display: block;
+  }
+}
+
+.arrowMobile {
+  display: block;
+  @include breakpoint(m) {
+    display: none;
   }
 }
 
