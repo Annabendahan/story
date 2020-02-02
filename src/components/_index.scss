@@ -1,0 +1,146 @@
+.main {
+  font-family: Roboto Mono;
+  text-align: center;
+  background: map-get($colors, beige);
+  color: black;
+  &__blue {
+    color: map-get($colors, blue);
+  }
+  height: 90vh;
+  width: 100%;
+}
+
+.content {
+  margin: auto;
+  padding-top: 30%;
+  @include breakpoint(m) {
+    padding-top: 15%;
+  }
+  max-width: 80%;
+  a {
+    color: map-get($colors, blue);
+  }
+}
+
+.techs {
+  position: relative;
+  color: map-get($colors, blue);
+}
+
+.mi {
+  width: 70%;
+  margin-top: -150px;
+  @include breakpoint(s) {
+    max-width: 400px;
+    flex: 0 0 40%;
+  }
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  height: 400px;
+
+  justify-content: space-between;
+  @include breakpoint(s) {
+    width: 60%;
+    flex-direction: row;
+    height: unset;
+  }
+}
+
+.profile-left {
+  flex: 0 0 50%;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.short {
+  max-width: 700px;
+  margin: auto;
+  color: black;
+}
+
+.veryshort {
+  max-width: 300px;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+  @include breakpoint(s) {
+    height: 600px;
+  }
+
+  @include breakpoint(m) {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.t {
+  margin-bottom: 2px;
+  margin-top: 10px;
+}
+
+.arrow {
+  transform: rotate(90deg);
+  @include breakpoint(m) {
+    transform: rotate(0deg);
+  }
+}
+
+.nokia {
+  width: 40px;
+}
+
+.recap {
+  color: map-get($colors, blue);
+  text-align: left;
+  @include breakpoint(m) {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.pic {
+  width: 300px;
+  margin: 30px;
+  @include breakpoint(m) {
+    width: 400px;
+  }
+}
+
+.asafvid {
+  width: 100%;
+  margin-top: 50px;
+  @include breakpoint(s) {
+    width: 600px;
+  }
+}
+
+.footballpics {
+  position: relative;
+  height: 400px;
+  width: 100;
+  img {
+    margin: 10px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+
+    @include breakpoint(m) {
+      display: inline;
+      position: relative;
+    }
+  }
+}
