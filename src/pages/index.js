@@ -163,6 +163,7 @@ class IndexPage extends Component {
                 <p>
                   Ou celui de l’<b>ASAF</b> (association de ski d’AIR FRANCE)
                 </p>
+
                 <video className="asafvid" playsinline autoPlay loop muted>
                   <source src={asafv} type="video/mp4" />
                 </video>
