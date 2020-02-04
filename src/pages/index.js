@@ -152,7 +152,7 @@ class IndexPage extends Component {
                 <p>
                   Comme le site d'<b>Alice Thonnier</b>, styliste et modéliste
                 </p>
-                <video className="asafvid" playsinline autoPlay loop muted>
+                <video className="asafvid" playsInline autoPlay loop muted>
                   <source src={alicev} type="video/mp4" />
                 </video>
               </div>
@@ -164,7 +164,7 @@ class IndexPage extends Component {
                   Ou celui de l’<b>ASAF</b> (association de ski d’AIR FRANCE)
                 </p>
 
-                <video className="asafvid" playsinline autoPlay loop muted>
+                <video className="asafvid" playsInline autoPlay loop muted>
                   <source src={asafv} type="video/mp4" />
                 </video>
               </div>
