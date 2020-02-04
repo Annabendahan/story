@@ -162,6 +162,7 @@ class IndexPage extends Component {
                 >
                   <source src={alicev} type="video/mp4" />
                 </video>
+                <div class="loader">Loading...</div>
               </div>
             ) : null}
 
@@ -173,6 +174,7 @@ class IndexPage extends Component {
 
                 <video
                   poster="poster2"
+                  preload="auto"
                   className="asafvid"
                   playsInline
                   autoPlay
@@ -181,6 +183,7 @@ class IndexPage extends Component {
                 >
                   <source src={asafv} type="video/mp4" />
                 </video>
+                <div class="loader">Loading...</div>
               </div>
             ) : null}
 
