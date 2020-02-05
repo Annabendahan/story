@@ -174,7 +174,6 @@ class IndexPage extends Component {
 
                 <video
                   poster="poster2"
-                  preload="auto"
                   className="asafvid"
                   playsInline
                   autoPlay
