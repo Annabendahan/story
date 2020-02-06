@@ -12,6 +12,8 @@ import foot4 from "../images/foot4.png"
 import nokia from "../images/nokia.jpg"
 import cv from "../images/CVJAN2020.pdf"
 
+import footvid from "../images/footvid.mp4"
+
 import asafv from "../images/asaf2.mp4"
 
 import alicev from "../images/alicesite.mp4"
@@ -582,15 +584,17 @@ class IndexPage extends Component {
                 this.state.step === 31 ||
                 this.state.step === 32 ||
                 this.state.step === 33 ? (
-                  <img src={foot3} alt="mi" />
+                  <img src={foot3} className="footpic" alt="mi" />
                 ) : null}
                 {this.state.step === 31 ||
                 this.state.step === 32 ||
                 this.state.step === 33 ? (
-                  <img src={foot9} alt="mi" />
+                  <video className="footpic" playsInline autoPlay loop muted>
+                    <source src={footvid} type="video/mp4" />
+                  </video>
                 ) : null}
                 {this.state.step === 32 || this.state.step === 33 ? (
-                  <img src={foot5} alt="mi" />
+                  <img src={foot5} className="footpic" alt="mi" />
                 ) : null}
                 {this.state.step === 33 ? null : null}
               </div>
