@@ -13,8 +13,17 @@
 .content {
   margin: auto;
   padding-top: 30%;
+  @include breakpoint(s) {
+    padding-top: 20%;
+  }
+  @include breakpoint(l) {
+    padding-top: 15%;
+  }
   @include breakpoint(xl) {
     padding-top: 15%;
+  }
+  @include breakpoint(xxl) {
+    padding-top: 10%;
   }
   max-width: 80%;
   a {
@@ -28,26 +37,19 @@
 }
 
 .mi {
-  width: 70%;
-  margin-top: -150px;
-  @include breakpoint(s) {
-    max-width: 400px;
-    flex: 0 0 40%;
+  max-height: 400px;
+  @include breakpoint(xl) {
+    max-height: 500px;
+  }
+  @include breakpoint(xxl) {
+    max-height: 600px;
   }
 }
 
 .profile {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: auto;
-  height: 400px;
-
-  justify-content: space-between;
+  max-height: 80%;
   @include breakpoint(xl) {
-    width: 60%;
-    flex-direction: row;
-    height: unset;
+    margin-top: -70px;
   }
 }
 
@@ -140,8 +142,27 @@
 
 .footballpics {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+
+  img,
+  video {
+    // position: absolute;
+    // top: 0px;
+    // left: 0px;
+    width: 55%;
+    @include breakpoint(s) {
+      width: 35%;
+    }
+
+    margin: 10px auto;
+  }
+
+  @include breakpoint(l) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .back-mobile {
@@ -164,6 +185,9 @@
   display: none;
   @include breakpoint(m) {
     display: block;
+  }
+  &:hover {
+    cursor: pointer;
   }
 }
 
@@ -212,8 +236,4 @@
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-}
-
-.footpic {
-  width: 30%;
 }

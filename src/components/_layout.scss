@@ -207,11 +207,12 @@ body {
   word-wrap: break-word;
   font-kerning: normal;
   background: map-get($colors, beige);
-  overflow: hidden;
+  overflow-x: hidden;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  cursor: url("../images/Ellipse3.png"), auto;
 }
 img {
   max-width: 100%;
