@@ -451,10 +451,8 @@ class IndexPage extends Component {
             this.state.step === 27 ? (
               <p>
                 {" "}
-                Enfin, j’interviens aussi sur des sites <b>
-                  {" "}
-                  wordpress{" "}
-                </b> ou <b>cargo</b>
+                Enfin, j’interviens sur des sites <b> wordpress </b> ou{" "}
+                <b>cargo</b>
               </p>
             ) : null}
             <p

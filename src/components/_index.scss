@@ -39,10 +39,10 @@
 .mi {
   max-height: 400px;
   @include breakpoint(xl) {
-    max-height: 500px;
+    max-height: 450px;
   }
   @include breakpoint(xxl) {
-    max-height: 600px;
+    max-height: 500px;
   }
 }
 
