@@ -95,7 +95,7 @@ class IndexPage extends Component {
               <p>
                 <b>
                   {" "}
-                  Bonjour, <br /> Cliquer pour découvrir{" "}
+                  Bonjour, <br /> Cliquez pour découvrir{" "}
                 </b>
               </p>
             ) : null}
@@ -147,8 +147,8 @@ class IndexPage extends Component {
                 <p className="short">
                   <br />
                   <br />
-                  Je crée tout types de sites internet, depuis le design
-                  d’interface jusqu’au déploiement du site
+                  Je crée tous types de sites internet, du design d’interface
+                  jusqu’au déploiement du site
                 </p>
               </div>
             ) : null}
@@ -189,8 +189,8 @@ class IndexPage extends Component {
               this.state.step === 15 ||
               this.state.step === 16 ? (
                 <p className="short">
-                  J’utilise principalement des technologies modernes pour créer
-                  des sites <b> rapides, efficaces et responsifs </b>
+                  J’utilise des technologies modernes pour créer des sites{" "}
+                  <b> rapides, efficaces </b> et <b> responsifs </b>
                 </p>
               ) : null}
               <p style={{ textAlign: "left", width: "200px", margin: "auto" }}>
@@ -351,8 +351,8 @@ class IndexPage extends Component {
             {this.state.step === 17 ? (
               <p className="short">
                 {" "}
-                Ma priorité? Donner au client la plus grande marge de manoeuvre
-                pour gérer son site{" "}
+                Ma priorité ? Donner à mes clients la plus grande marge de
+                manoeuvre pour gérer leur site{" "}
               </p>
             ) : null}
             {this.state.step === 18 ||
@@ -361,7 +361,8 @@ class IndexPage extends Component {
             this.state.step === 21 ? (
               <p>
                 {" "}
-                Comme par exemple pour le site de <b>Quentin Mameri</b>, avocat{" "}
+                Comme, par exemple, pour le site de <b>Quentin Mameri</b>,
+                avocat{" "}
               </p>
             ) : null}
             {this.state.step === 19 ||
@@ -372,14 +373,10 @@ class IndexPage extends Component {
                 this.state.step === 20 ||
                 this.state.step === 21 ? (
                   <div>
-                    <p className="t">
-                      {" "}
-                      <b> (gatbsy.js) </b>
-                    </p>
                     <p className="veryshort">
                       {" "}
-                      Une interface dynamique, une mise en page et un design
-                      totalement libres{" "}
+                      Pour l'interface, j'utilise <b> Gatsby.js </b> qui permet
+                      une mise en page et un design totalement libres.{" "}
                     </p>{" "}
                   </div>
                 ) : null}
@@ -430,20 +427,17 @@ class IndexPage extends Component {
                       </svg>
                       <p>
                         {" "}
-                        tout ça lié avec <b>GraphQL</b>{" "}
+                        le tout lié par <b>GraphQL</b>{" "}
                       </p>{" "}
                     </div>
                   </div>
                 ) : null}
                 {this.state.step === 20 || this.state.step === 21 ? (
                   <div>
-                    <p className="t">
-                      <b> (wordpress CMS) </b>
-                    </p>
                     <p className="veryshort">
                       {" "}
-                      Une plateforme qui permet au client de gérer le contenu de
-                      son site{" "}
+                      Pour permettre au client de gérer lui-même le contenu de
+                      son site, j'utilise <b> Wordpress CMS </b>.{" "}
                     </p>
                   </div>
                 ) : null}
@@ -558,7 +552,7 @@ class IndexPage extends Component {
             this.state.step === 31 ||
             this.state.step === 32 ||
             this.state.step === 33 ? (
-              <p> A part ça, je fais beaucoup de football </p>
+              <p> À part ça, je joue au football </p>
             ) : null}
             {this.state.step === 29 ||
             this.state.step === 30 ||
@@ -619,7 +613,7 @@ class IndexPage extends Component {
               ) : null}
               {this.state.step === 35 ? (
                 <p>
-                  et télécharger mon{" "}
+                  Télécharger mon{" "}
                   <b>
                     {" "}
                     <a href={cv} target="blank" download>
@@ -634,7 +628,7 @@ class IndexPage extends Component {
             this.state.step === 37 ||
             this.state.step === 38 ||
             this.state.step === 39 ? (
-              <p>Et me contacter bien sûr </p>
+              <p>Et me contacter bien sûr! </p>
             ) : null}
             {this.state.step === 37 ||
             this.state.step === 38 ||
@@ -656,7 +650,7 @@ class IndexPage extends Component {
             ) : null}
             {this.state.step === 41 ? (
               <p>
-                Et petit récapitulatif{" "}
+                Petit récapitulatif{" "}
                 <svg
                   width="34"
                   height="8"
