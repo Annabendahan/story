@@ -6,7 +6,7 @@
   &__blue {
     color: map-get($colors, blue);
   }
-  height: 90vh;
+  min-height: 90vh;
   width: 100%;
 }
 
