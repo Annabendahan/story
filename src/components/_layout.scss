@@ -646,11 +646,11 @@ pre tt:after {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  &:hover {
-    cursor: pointer;
-  }
 
   p {
     font-size: 0.6rem;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
