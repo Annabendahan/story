@@ -12,7 +12,7 @@ import foot4 from "../images/foot4.png"
 import nokia from "../images/nokia.jpg"
 import cv from "../images/CVJAN2020.pdf"
 
-import asafv from "../images/asafvideo2.mp4"
+import asafv from "../images/asaf2.mp4"
 
 import alicev from "../images/alicesite.mp4"
 
