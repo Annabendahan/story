@@ -14,13 +14,13 @@
   margin: auto;
   padding-top: 30%;
   @include breakpoint(s) {
-    padding-top: 20%;
+    padding-top: 20vh;
   }
   @include breakpoint(l) {
-    padding-top: 15%;
+    padding-top: 15vh;
   }
   @include breakpoint(xl) {
-    padding-top: 15%;
+    padding-top: 20vh;
   }
   @include breakpoint(xxl) {
     padding-top: 10%;
