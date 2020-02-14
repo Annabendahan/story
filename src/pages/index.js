@@ -601,7 +601,7 @@ class IndexPage extends Component {
                   N'hésitez pas à aller voir mon{" "}
                   <b>
                     <a
-                      href="https://www.instagram.com/annabdh_/"
+                      href="https://www.instagram.com/lebendan/"
                       target="blank"
                     >
                       instagram{" "}
