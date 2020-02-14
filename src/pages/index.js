@@ -21,6 +21,14 @@ import alicev from "../images/alicesite.mp4"
 import alpe from "../images/alpeh3 1.png"
 import img from "../images/IMG_0356 copie.jpg"
 
+import d8 from "../images/d1.png"
+import d9 from "../images/d2.png"
+import d3 from "../images/d3.png"
+import d4 from "../images/d4.png"
+import d5 from "../images/d5.png"
+import d6 from "../images/d6.png"
+import d7 from "../images/d7.png"
+
 class IndexPage extends Component {
   state = {
     step: 1,
@@ -47,7 +55,6 @@ class IndexPage extends Component {
     let d1 = new Date("January 1, 2018")
     var dDiff = new Date(d2 - d1)
 
-    console.log(dDiff)
     var txt = "Il s'est écoulé : "
 
     txt += dDiff.getMonth()
@@ -60,8 +67,6 @@ class IndexPage extends Component {
     txt += " minutes, "
     txt += dDiff.getSeconds() - 1
     txt += " secondes depuis 2013"
-
-    console.log(txt)
 
     return (
       <Layout>
@@ -99,7 +104,6 @@ class IndexPage extends Component {
                 </b>
               </p>
             ) : null}
-
             {this.state.step === 2 ||
             this.state.step === 3 ||
             this.state.step === 4 ? (
@@ -119,7 +123,6 @@ class IndexPage extends Component {
                 ) : null}
               </div>
             ) : null}
-
             {this.state.step === 5 || this.state.step === 6 ? (
               <div>
                 <p>
@@ -129,7 +132,6 @@ class IndexPage extends Component {
                 </p>
               </div>
             ) : null}
-
             {this.state.step === 6 ? (
               <div>
                 <svg
@@ -152,7 +154,6 @@ class IndexPage extends Component {
                 </p>
               </div>
             ) : null}
-
             {this.state.step === 7 ? (
               <div>
                 <p>
@@ -164,7 +165,6 @@ class IndexPage extends Component {
                 <div class="loader">Loading...</div>
               </div>
             ) : null}
-
             {this.state.step === 8 ? (
               <div>
                 <p>
@@ -177,7 +177,6 @@ class IndexPage extends Component {
                 <div class="loader">Loading...</div>
               </div>
             ) : null}
-
             <div className="techs">
               {" "}
               {this.state.step === 9 ||
@@ -443,6 +442,7 @@ class IndexPage extends Component {
                 ) : null}
               </div>
             ) : null}
+             
             {this.state.step === 22 ||
             this.state.step === 23 ||
             this.state.step === 24 ||
@@ -697,7 +697,7 @@ class IndexPage extends Component {
                     </a>
                     <br />•{" "}
                     <a
-                      href="https://www.instagram.com/annabdh_/"
+                      href="https://www.instagram.com/lebendan/"
                       target="blank"
                     >
                       instagram{" "}
