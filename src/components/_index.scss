@@ -1,8 +1,9 @@
 .main {
-  font-family: Roboto Mono;
+  font-family: Fira Code;
   text-align: center;
+  font-weight: 300;
   background: map-get($colors, beige);
-  color: black;
+  color: map-get($colors, grey);
   &__blue {
     color: map-get($colors, blue);
   }
@@ -12,6 +13,10 @@
 
 .content {
   margin: auto;
+  a {
+    text-decoration: none;
+    color: map-get($colors, grey);
+  }
   padding-top: 30%;
   @include breakpoint(s) {
     padding-top: 20vh;
@@ -26,14 +31,10 @@
     padding-top: 10%;
   }
   max-width: 80%;
-  a {
-    color: map-get($colors, blue);
-  }
 }
 
 .techs {
   position: relative;
-  color: map-get($colors, blue);
 }
 
 .mi {
@@ -62,7 +63,6 @@
 .short {
   max-width: 700px;
   margin: auto;
-  color: black;
 }
 
 .veryshort {
@@ -110,15 +110,32 @@
   width: 40px;
 }
 
+.ex {
+  display: none;
+  @include breakpoint(s) {
+    display: block;
+  }
+}
+
 .recap {
-  color: map-get($colors, blue);
   text-align: left;
-  margin-left: 50px;
+
+  margin-top: -50px;
+  width: 300px;
   @include breakpoint(m) {
-    display: flex;
     justify-content: space-between;
-    width: 80%;
+
     margin: auto;
+    margin-top: -60px;
+  }
+  p {
+    margin: 5px;
+  }
+  a {
+    margin: 5px 0px;
+  }
+  div {
+    margin: 40px 0px;
   }
 }
 
@@ -256,4 +273,9 @@
   @include breakpoint(m) {
     flex-direction: row;
   }
+}
+
+.text {
+  position: relative;
+  margin-bottom: 7px !important;
 }

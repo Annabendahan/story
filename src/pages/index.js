@@ -98,10 +98,8 @@ class IndexPage extends Component {
           <div className="content">
             {this.state.step === 1 ? (
               <p>
-                <b>
-                  {" "}
-                  Bonjour, <br /> Cliquez pour découvrir{" "}
-                </b>
+                {" "}
+                Bonjour, <br /> Cliquez pour découvrir{" "}
               </p>
             ) : null}
             {this.state.step === 2 ||
@@ -112,7 +110,34 @@ class IndexPage extends Component {
                   {this.state.step === 2 ||
                   this.state.step === 3 ||
                   this.state.step === 4 ? (
-                    <p> Je suis Anna Bendahan </p>
+                    <p>
+                      {" "}
+                      Je suis{" "}
+                      <span className="text">
+                        {" "}
+                        Anna Bendahan{" "}
+                        <svg
+                          style={{
+                            position: "absolute",
+                            left: "0px",
+                            bottom: "-2px",
+                          }}
+                          width="140"
+                          height="3"
+                          viewBox="0 0 140 3"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <line
+                            y1="1.75"
+                            x2="140"
+                            y2="1.75"
+                            stroke="black"
+                            stroke-width="4"
+                          />
+                        </svg>{" "}
+                      </span>{" "}
+                    </p>
                   ) : null}
 
                   {this.state.step === 4 ? <p> J'ai 24 ans </p> : null}
@@ -126,8 +151,32 @@ class IndexPage extends Component {
             {this.state.step === 5 || this.state.step === 6 ? (
               <div>
                 <p>
-                  Je suis <b> développeuse web en freelance </b> depuis 2 ans{" "}
-                  <br />
+                  Je suis{" "}
+                  <span className="text">
+                    {" "}
+                    développeuse web{" "}
+                    <svg
+                      style={{
+                        position: "absolute",
+                        left: "0px",
+                        bottom: "-2px",
+                      }}
+                      width="170"
+                      height="3"
+                      viewBox="0 0 170 3"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="1.75"
+                        x2="170"
+                        y2="1.75"
+                        stroke="black"
+                        stroke-width="4"
+                      />
+                    </svg>{" "}
+                  </span>{" "}
+                  en freelance depuis 2 ans <br />
                   <br />
                 </p>
               </div>
@@ -157,7 +206,32 @@ class IndexPage extends Component {
             {this.state.step === 7 ? (
               <div>
                 <p>
-                  Comme le site d'<b>Alice Thonnier</b>, styliste et modéliste
+                  Comme le site d'
+                  <span className="text">
+                    Alice Thonnier{" "}
+                    <svg
+                      className="ex"
+                      style={{
+                        position: "absolute",
+                        left: "0px",
+                        bottom: "-2px",
+                      }}
+                      width="150"
+                      height="3"
+                      viewBox="0 0 150 3"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="1.75"
+                        x2="150"
+                        y2="1.75"
+                        stroke="black"
+                        stroke-width="4"
+                      />
+                    </svg>{" "}
+                  </span>{" "}
+                  , styliste et modéliste
                 </p>
                 <video className="asafvid" playsInline autoPlay loop muted>
                   <source src={alicev} type="video/mp4" />
@@ -168,7 +242,31 @@ class IndexPage extends Component {
             {this.state.step === 8 ? (
               <div>
                 <p>
-                  Ou celui de l’<b>ASAF</b> (association de ski d’AIR FRANCE)
+                  Ou celui de l’
+                  <span className="text">
+                    ASAF{" "}
+                    <svg
+                      style={{
+                        position: "absolute",
+                        left: "0px",
+                        bottom: "-2px",
+                      }}
+                      width="40"
+                      height="3"
+                      viewBox="0 0 40 3"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="1.75"
+                        x2="40"
+                        y2="1.75"
+                        stroke="black"
+                        stroke-width="4"
+                      />
+                    </svg>{" "}
+                  </span>{" "}
+                  (association de ski d’AIR FRANCE)
                 </p>
 
                 <video className="asafvid" playsInline autoPlay loop muted>
@@ -201,20 +299,7 @@ class IndexPage extends Component {
                 this.state.step === 15 ||
                 this.state.step === 16 ? (
                   <b>
-                    <br />{" "}
-                    <svg
-                      width="24"
-                      height="8"
-                      viewBox="0 0 34 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M33.3536 4.35356C33.5488 4.15829 33.5488 3.84171 33.3536 3.64645L30.1716 0.464469C29.9763 0.269207 29.6597 0.269207 29.4645 0.464469C29.2692 0.659731 29.2692 0.976313 29.4645 1.17158L32.2929 4L29.4645 6.82843C29.2692 7.02369 29.2692 7.34027 29.4645 7.53554C29.6597 7.7308 29.9763 7.7308 30.1716 7.53554L33.3536 4.35356ZM-4.37114e-08 4.5L33 4.5L33 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                        fill="#1027fa"
-                      />
-                    </svg>{" "}
-                    React.js
+                    <br /> • React.js
                     <br />
                   </b>
                 ) : null}
@@ -225,19 +310,7 @@ class IndexPage extends Component {
                 this.state.step === 15 ||
                 this.state.step === 16 ? (
                   <b>
-                    <svg
-                      width="24"
-                      height="8"
-                      viewBox="0 0 34 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M33.3536 4.35356C33.5488 4.15829 33.5488 3.84171 33.3536 3.64645L30.1716 0.464469C29.9763 0.269207 29.6597 0.269207 29.4645 0.464469C29.2692 0.659731 29.2692 0.976313 29.4645 1.17158L32.2929 4L29.4645 6.82843C29.2692 7.02369 29.2692 7.34027 29.4645 7.53554C29.6597 7.7308 29.9763 7.7308 30.1716 7.53554L33.3536 4.35356ZM-4.37114e-08 4.5L33 4.5L33 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                        fill="#1027fa"
-                      />
-                    </svg>{" "}
-                    Javascript
+                    • Javascript
                     <br />
                   </b>
                 ) : null}
@@ -248,19 +321,7 @@ class IndexPage extends Component {
                 this.state.step === 16 ? (
                   <b>
                     {" "}
-                    <svg
-                      width="24"
-                      height="8"
-                      viewBox="0 0 34 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M33.3536 4.35356C33.5488 4.15829 33.5488 3.84171 33.3536 3.64645L30.1716 0.464469C29.9763 0.269207 29.6597 0.269207 29.4645 0.464469C29.2692 0.659731 29.2692 0.976313 29.4645 1.17158L32.2929 4L29.4645 6.82843C29.2692 7.02369 29.2692 7.34027 29.4645 7.53554C29.6597 7.7308 29.9763 7.7308 30.1716 7.53554L33.3536 4.35356ZM-4.37114e-08 4.5L33 4.5L33 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                        fill="#1027fa"
-                      />
-                    </svg>{" "}
-                    Gatsby.js
+                    • Gatsby.js
                     <br />
                   </b>
                 ) : null}
@@ -270,19 +331,7 @@ class IndexPage extends Component {
                 this.state.step === 16 ? (
                   <b>
                     {" "}
-                    <svg
-                      width="24"
-                      height="8"
-                      viewBox="0 0 34 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M33.3536 4.35356C33.5488 4.15829 33.5488 3.84171 33.3536 3.64645L30.1716 0.464469C29.9763 0.269207 29.6597 0.269207 29.4645 0.464469C29.2692 0.659731 29.2692 0.976313 29.4645 1.17158L32.2929 4L29.4645 6.82843C29.2692 7.02369 29.2692 7.34027 29.4645 7.53554C29.6597 7.7308 29.9763 7.7308 30.1716 7.53554L33.3536 4.35356ZM-4.37114e-08 4.5L33 4.5L33 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                        fill="#1027fa"
-                      />
-                    </svg>{" "}
-                    SCSS
+                    • SCSS
                     <br />
                   </b>
                 ) : null}
@@ -291,57 +340,21 @@ class IndexPage extends Component {
                 this.state.step === 16 ? (
                   <b>
                     {" "}
-                    <svg
-                      width="24"
-                      height="8"
-                      viewBox="0 0 34 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M33.3536 4.35356C33.5488 4.15829 33.5488 3.84171 33.3536 3.64645L30.1716 0.464469C29.9763 0.269207 29.6597 0.269207 29.4645 0.464469C29.2692 0.659731 29.2692 0.976313 29.4645 1.17158L32.2929 4L29.4645 6.82843C29.2692 7.02369 29.2692 7.34027 29.4645 7.53554C29.6597 7.7308 29.9763 7.7308 30.1716 7.53554L33.3536 4.35356ZM-4.37114e-08 4.5L33 4.5L33 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                        fill="#1027fa"
-                      />
-                    </svg>{" "}
-                    Vue.js
+                    • Vue.js
                     <br />
                   </b>
                 ) : null}
                 {this.state.step === 15 || this.state.step === 16 ? (
                   <b>
                     {" "}
-                    <svg
-                      width="24"
-                      height="8"
-                      viewBox="0 0 34 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M33.3536 4.35356C33.5488 4.15829 33.5488 3.84171 33.3536 3.64645L30.1716 0.464469C29.9763 0.269207 29.6597 0.269207 29.4645 0.464469C29.2692 0.659731 29.2692 0.976313 29.4645 1.17158L32.2929 4L29.4645 6.82843C29.2692 7.02369 29.2692 7.34027 29.4645 7.53554C29.6597 7.7308 29.9763 7.7308 30.1716 7.53554L33.3536 4.35356ZM-4.37114e-08 4.5L33 4.5L33 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                        fill="#1027fa"
-                      />
-                    </svg>{" "}
-                    GraphQL
+                    • GraphQL
                     <br />
                   </b>
                 ) : null}
                 {this.state.step === 16 ? (
                   <b>
                     {" "}
-                    <svg
-                      width="24"
-                      height="8"
-                      viewBox="0 0 34 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M33.3536 4.35356C33.5488 4.15829 33.5488 3.84171 33.3536 3.64645L30.1716 0.464469C29.9763 0.269207 29.6597 0.269207 29.4645 0.464469C29.2692 0.659731 29.2692 0.976313 29.4645 1.17158L32.2929 4L29.4645 6.82843C29.2692 7.02369 29.2692 7.34027 29.4645 7.53554C29.6597 7.7308 29.9763 7.7308 30.1716 7.53554L33.3536 4.35356ZM-4.37114e-08 4.5L33 4.5L33 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                        fill="#1027fa"
-                      />
-                    </svg>{" "}
-                    Netlify
+                    • Netlify
                     <br />
                   </b>
                 ) : null}
@@ -360,8 +373,31 @@ class IndexPage extends Component {
             this.state.step === 21 ? (
               <p>
                 {" "}
-                Comme, par exemple, pour le site de <b>Quentin Mameri</b>,
-                avocat{" "}
+                Comme, par exemple, pour le site de{" "}
+                <span className="text">
+                  Quentin Mameri{" "}
+                  <svg
+                    style={{
+                      position: "absolute",
+                      left: "0px",
+                      bottom: "-2px",
+                    }}
+                    width="150"
+                    height="3"
+                    viewBox="0 0 150 3"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line
+                      y1="1.75"
+                      x2="150"
+                      y2="1.75"
+                      stroke="black"
+                      stroke-width="4"
+                    />
+                  </svg>{" "}
+                </span>{" "}
+                , avocat{" "}
               </p>
             ) : null}
             {this.state.step === 19 ||
@@ -374,8 +410,32 @@ class IndexPage extends Component {
                   <div>
                     <p className="veryshort">
                       {" "}
-                      Pour l'interface, j'utilise <b> Gatsby.js </b> qui permet
-                      une mise en page et un design totalement libres.{" "}
+                      Pour l'interface, j'utilise{" "}
+                      <span className="text">
+                        Gatsby.js{" "}
+                        <svg
+                          style={{
+                            position: "absolute",
+                            left: "0px",
+                            bottom: "-2px",
+                          }}
+                          width="95"
+                          height="3"
+                          viewBox="0 0 95 3"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <line
+                            y1="1.75"
+                            x2="95"
+                            y2="1.75"
+                            stroke="black"
+                            stroke-width="4"
+                          />
+                        </svg>{" "}
+                      </span>{" "}
+                      qui permet une mise en page et un design totalement
+                      libres.{" "}
                     </p>{" "}
                   </div>
                 ) : null}
@@ -426,7 +486,30 @@ class IndexPage extends Component {
                       </svg>
                       <p>
                         {" "}
-                        le tout lié par <b>GraphQL</b>{" "}
+                        le tout lié par{" "}
+                        <span className="text">
+                          GraphQL{" "}
+                          <svg
+                            style={{
+                              position: "absolute",
+                              left: "0px",
+                              bottom: "-2px",
+                            }}
+                            width="80"
+                            height="3"
+                            viewBox="0 0 80 3"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <line
+                              y1="1.75"
+                              x2="80"
+                              y2="1.75"
+                              stroke="black"
+                              stroke-width="4"
+                            />
+                          </svg>{" "}
+                        </span>{" "}
                       </p>{" "}
                     </div>
                   </div>
@@ -436,7 +519,31 @@ class IndexPage extends Component {
                     <p className="veryshort">
                       {" "}
                       Pour permettre au client de gérer lui-même le contenu de
-                      son site, j'utilise <b> Wordpress CMS </b>.{" "}
+                      son site, j'utilise{" "}
+                      <span className="text">
+                        WordpressCMS{" "}
+                        <svg
+                          style={{
+                            position: "absolute",
+                            left: "0px",
+                            bottom: "-2px",
+                          }}
+                          width="130"
+                          height="3"
+                          viewBox="0 0 130 3"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <line
+                            y1="1.75"
+                            x2="130"
+                            y2="1.75"
+                            stroke="black"
+                            stroke-width="4"
+                          />
+                        </svg>{" "}
+                      </span>{" "}
+                      .{" "}
                     </p>
                   </div>
                 ) : null}
@@ -451,8 +558,54 @@ class IndexPage extends Component {
             this.state.step === 27 ? (
               <p>
                 {" "}
-                Enfin, j’interviens sur des sites <b> wordpress </b> ou{" "}
-                <b>cargo</b>
+                Enfin, j’interviens sur des sites{" "}
+                <span className="text">
+                  wordpress{" "}
+                  <svg
+                    style={{
+                      position: "absolute",
+                      left: "0px",
+                      bottom: "-2px",
+                    }}
+                    width="95"
+                    height="3"
+                    viewBox="0 0 95 3"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line
+                      y1="1.75"
+                      x2="95"
+                      y2="1.75"
+                      stroke="black"
+                      stroke-width="4"
+                    />
+                  </svg>{" "}
+                </span>{" "}
+                ou{" "}
+                <span className="text">
+                  cargo{" "}
+                  <svg
+                    style={{
+                      position: "absolute",
+                      left: "0px",
+                      bottom: "-2px",
+                    }}
+                    width="55"
+                    height="3"
+                    viewBox="0 0 55 3"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line
+                      y1="1.75"
+                      x2="55"
+                      y2="1.75"
+                      stroke="black"
+                      stroke-width="4"
+                    />
+                  </svg>{" "}
+                </span>{" "}
               </p>
             ) : null}
             <p
@@ -468,19 +621,7 @@ class IndexPage extends Component {
               this.state.step === 26 ||
               this.state.step === 27 ? (
                 <b>
-                  <svg
-                    width="24"
-                    height="8"
-                    viewBox="0 0 34 8"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M33.3536 4.35356C33.5488 4.15829 33.5488 3.84171 33.3536 3.64645L30.1716 0.464469C29.9763 0.269207 29.6597 0.269207 29.4645 0.464469C29.2692 0.659731 29.2692 0.976313 29.4645 1.17158L32.2929 4L29.4645 6.82843C29.2692 7.02369 29.2692 7.34027 29.4645 7.53554C29.6597 7.7308 29.9763 7.7308 30.1716 7.53554L33.3536 4.35356ZM-4.37114e-08 4.5L33 4.5L33 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                      fill="#1027fa"
-                    />
-                  </svg>{" "}
-                  Pour ajuster un footer <br />
+                  • Pour ajuster un footer <br />
                 </b>
               ) : null}
               {this.state.step === 24 ||
@@ -488,19 +629,7 @@ class IndexPage extends Component {
               this.state.step === 26 ||
               this.state.step === 27 ? (
                 <b>
-                  <svg
-                    width="24"
-                    height="8"
-                    viewBox="0 0 34 8"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M33.3536 4.35356C33.5488 4.15829 33.5488 3.84171 33.3536 3.64645L30.1716 0.464469C29.9763 0.269207 29.6597 0.269207 29.4645 0.464469C29.2692 0.659731 29.2692 0.976313 29.4645 1.17158L32.2929 4L29.4645 6.82843C29.2692 7.02369 29.2692 7.34027 29.4645 7.53554C29.6597 7.7308 29.9763 7.7308 30.1716 7.53554L33.3536 4.35356ZM-4.37114e-08 4.5L33 4.5L33 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                      fill="#1027fa"
-                    />
-                  </svg>{" "}
-                  Trier des articles
+                  • Trier des articles
                   <br />
                 </b>
               ) : null}
@@ -508,37 +637,13 @@ class IndexPage extends Component {
               this.state.step === 26 ||
               this.state.step === 27 ? (
                 <b>
-                  <svg
-                    width="24"
-                    height="8"
-                    viewBox="0 0 34 8"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M33.3536 4.35356C33.5488 4.15829 33.5488 3.84171 33.3536 3.64645L30.1716 0.464469C29.9763 0.269207 29.6597 0.269207 29.4645 0.464469C29.2692 0.659731 29.2692 0.976313 29.4645 1.17158L32.2929 4L29.4645 6.82843C29.2692 7.02369 29.2692 7.34027 29.4645 7.53554C29.6597 7.7308 29.9763 7.7308 30.1716 7.53554L33.3536 4.35356ZM-4.37114e-08 4.5L33 4.5L33 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                      fill="#1027fa"
-                    />
-                  </svg>{" "}
-                  Changer un header
+                  • Changer un header
                   <br />
                 </b>
               ) : null}
               {this.state.step === 26 || this.state.step === 27 ? (
                 <b>
-                  <svg
-                    width="24"
-                    height="8"
-                    viewBox="0 0 34 8"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M33.3536 4.35356C33.5488 4.15829 33.5488 3.84171 33.3536 3.64645L30.1716 0.464469C29.9763 0.269207 29.6597 0.269207 29.4645 0.464469C29.2692 0.659731 29.2692 0.976313 29.4645 1.17158L32.2929 4L29.4645 6.82843C29.2692 7.02369 29.2692 7.34027 29.4645 7.53554C29.6597 7.7308 29.9763 7.7308 30.1716 7.53554L33.3536 4.35356ZM-4.37114e-08 4.5L33 4.5L33 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
-                      fill="#1027fa"
-                    />
-                  </svg>{" "}
-                  Modifier une page <br />
+                  • Modifier une page <br />
                 </b>
               ) : null}
               {this.state.step === 27 ? <p> ...</p> : null}
@@ -559,16 +664,35 @@ class IndexPage extends Component {
             this.state.step === 33 ? (
               <div>
                 <p>
-                  <b>
-                    {" "}
+                  <span className="text">
                     <a
                       href="https://www.instagram.com/usparisxifeminine/"
                       target="blank"
                     >
                       @usparisxifeminine
                     </a>
-                  </b>{" "}
-                </p>
+                    <svg
+                      style={{
+                        position: "absolute",
+                        left: "0px",
+                        bottom: "-2px",
+                      }}
+                      width="185"
+                      height="3"
+                      viewBox="0 0 185 3"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="1.75"
+                        x2="185"
+                        y2="1.75"
+                        stroke="black"
+                        stroke-width="4"
+                      />
+                    </svg>{" "}
+                  </span>{" "}
+                </p>{" "}
               </div>
             ) : null}
             {this.state.step === 30 ||
@@ -599,25 +723,69 @@ class IndexPage extends Component {
               {this.state.step === 34 || this.state.step === 35 ? (
                 <p>
                   N'hésitez pas à aller voir mon{" "}
-                  <b>
+                  <span className="text">
                     <a
                       href="https://www.instagram.com/lebendan/"
                       target="blank"
                     >
                       instagram{" "}
                     </a>
-                  </b>
+                    <svg
+                      style={{
+                        position: "absolute",
+                        left: "0px",
+                        bottom: "-2px",
+                      }}
+                      width="95"
+                      height="3"
+                      viewBox="0 0 95 3"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="1.75"
+                        x2="95"
+                        y2="1.75"
+                        stroke="black"
+                        stroke-width="4"
+                      />
+                    </svg>{" "}
+                  </span>{" "}
                 </p>
               ) : null}
               {this.state.step === 35 ? (
                 <p>
                   Télécharger mon{" "}
-                  <b>
-                    {" "}
-                    <a href={cv} target="blank" download>
-                      CV
+                  <span className="text">
+                    <a
+                      href="https://www.instagram.com/lebendan/"
+                      target="blank"
+                    >
+                      <a href={cv} target="blank" download>
+                        CV
+                      </a>
                     </a>
-                  </b>
+                    <svg
+                      style={{
+                        position: "absolute",
+                        left: "0px",
+                        bottom: "-2px",
+                      }}
+                      width="25"
+                      height="3"
+                      viewBox="0 0 25 3"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="1.75"
+                        x2="25"
+                        y2="1.75"
+                        stroke="black"
+                        stroke-width="4"
+                      />
+                    </svg>{" "}
+                  </span>{" "}
                 </p>
               ) : null}
             </div>
@@ -665,50 +833,192 @@ class IndexPage extends Component {
             ) : null}
             {this.state.step > 41 ? (
               <div className="recap">
+                <h1>RÉCAP</h1>
                 <div className="first">
-                  <p>
-                    • Anna Bendahan
-                    <br />
-                    • an.bendahan@gmail.com
-                    <br />• 0659133919
-                  </p>
+                  <p>Anna Bendahan, 25 </p>
+                  <p>Design & développement web</p>
+                  <p>Basée à Paris</p>
                 </div>
                 <div className="second">
+                  <p> an.bendahan@gmail.com </p> <p> + 33 659133919</p>
                   <p>
-                    •{" "}
-                    <a href="http://www.qm-avocat.com/" target="blank">
-                      site de Quentin Mameri{" "}
-                    </a>
-                    <br />•{" "}
-                    <a href="https://alicethonnier.netlify.com/" target="blank">
-                      site d'Alice Thonnier{" "}
-                    </a>
-                    <br />•{" "}
-                    <a href="https://jeskieaveclasaf.fr/" target="blank">
-                      site de l'Asaf{" "}
-                    </a>
+                    <span className="text">
+                      <a
+                        href="https://www.linkedin.com/in/anna-bendahan-55324113a/"
+                        target="blank"
+                      >
+                        linkedin{" "}
+                      </a>
+                      <svg
+                        style={{
+                          position: "absolute",
+                          left: "0px",
+                          bottom: "-2px",
+                        }}
+                        width="80"
+                        height="3"
+                        viewBox="0 0 80 3"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          y1="1.75"
+                          x2="80"
+                          y2="1.75"
+                          stroke="black"
+                          stroke-width="4"
+                        />
+                      </svg>{" "}
+                    </span>{" "}
+                  </p>
+                  <p>
+                    <span className="text">
+                      <a
+                        href="https://www.instagram.com/lebendan/"
+                        target="blank"
+                      >
+                        instagram{" "}
+                      </a>
+                      <svg
+                        style={{
+                          position: "absolute",
+                          left: "0px",
+                          bottom: "-2px",
+                        }}
+                        width="95"
+                        height="3"
+                        viewBox="0 0 95 3"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          y1="1.75"
+                          x2="95"
+                          y2="1.75"
+                          stroke="black"
+                          stroke-width="4"
+                        />
+                      </svg>{" "}
+                    </span>{" "}
+                  </p>
+                  <p>
+                    <span className="text">
+                      <a
+                        href="https://www.instagram.com/lebendan/"
+                        target="blank"
+                      >
+                        <a href={cv} target="blank" download>
+                          CV
+                        </a>
+                      </a>
+                      <svg
+                        style={{
+                          position: "absolute",
+                          left: "0px",
+                          bottom: "-2px",
+                        }}
+                        width="25"
+                        height="3"
+                        viewBox="0 0 25 3"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          y1="1.75"
+                          x2="25"
+                          y2="1.75"
+                          stroke="black"
+                          stroke-width="4"
+                        />
+                      </svg>{" "}
+                    </span>{" "}
+                    <p />
                   </p>
                 </div>
                 <div className="third">
                   <p>
-                    •{" "}
-                    <a href={cv} target="blank" download>
-                      CV
-                    </a>
-                    <br />•{" "}
-                    <a
-                      href="https://www.instagram.com/lebendan/"
-                      target="blank"
-                    >
-                      instagram{" "}
-                    </a>
-                    <br />•{" "}
-                    <a
-                      href="https://www.linkedin.com/in/anna-bendahan-55324113a/"
-                      target="blank"
-                    >
-                      linkedin{" "}
-                    </a>
+                    <span className="text">
+                      <a href="http://www.qm-avocat.com/" target="blank">
+                        www.qm-avocat.com{" "}
+                      </a>
+                      <svg
+                        style={{
+                          position: "absolute",
+                          left: "0px",
+                          bottom: "-2px",
+                        }}
+                        width="180"
+                        height="3"
+                        viewBox="0 0 180 3"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          y1="1.75"
+                          x2="180"
+                          y2="1.75"
+                          stroke="black"
+                          stroke-width="4"
+                        />
+                      </svg>{" "}
+                    </span>{" "}
+                  </p>
+                  <p>
+                    <span className="text">
+                      <a
+                        href="https://alicethonnier.netlify.com/"
+                        target="blank"
+                      >
+                        alicethonnier.netlify.com{" "}
+                      </a>
+                      <svg
+                        style={{
+                          position: "absolute",
+                          left: "0px",
+                          bottom: "-2px",
+                        }}
+                        width="250"
+                        height="3"
+                        viewBox="0 0 250 3"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          y1="1.75"
+                          x2="250"
+                          y2="1.75"
+                          stroke="black"
+                          stroke-width="4"
+                        />
+                      </svg>{" "}
+                    </span>{" "}
+                  </p>
+                  <p>
+                    <span className="text">
+                      <a href="https://jeskieaveclasaf.fr/" target="blank">
+                        jeskieaveclasaf.fr{" "}
+                      </a>
+                      <svg
+                        style={{
+                          position: "absolute",
+                          left: "0px",
+                          bottom: "-2px",
+                        }}
+                        width="180"
+                        height="3"
+                        viewBox="0 0 180 3"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          y1="1.75"
+                          x2="180"
+                          y2="1.75"
+                          stroke="black"
+                          stroke-width="4"
+                        />
+                      </svg>{" "}
+                    </span>{" "}
                   </p>
                 </div>
               </div>
