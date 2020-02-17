@@ -21,14 +21,6 @@ import alicev from "../images/alicesite.mp4"
 import alpe from "../images/alpeh3 1.png"
 import img from "../images/IMG_0356 copie.jpg"
 
-import d8 from "../images/d1.png"
-import d9 from "../images/d2.png"
-import d3 from "../images/d3.png"
-import d4 from "../images/d4.png"
-import d5 from "../images/d5.png"
-import d6 from "../images/d6.png"
-import d7 from "../images/d7.png"
-
 class IndexPage extends Component {
   state = {
     step: 1,
@@ -1020,6 +1012,31 @@ class IndexPage extends Component {
                       </svg>{" "}
                     </span>{" "}
                   </p>
+                  <div>
+                    <span className="text">
+                      <Link to="/projets">Autres projets </Link>
+                      <svg
+                        style={{
+                          position: "absolute",
+                          left: "0px",
+                          bottom: "-2px",
+                        }}
+                        width="140"
+                        height="3"
+                        viewBox="0 0 140 3"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          y1="1.75"
+                          x2="140"
+                          y2="1.75"
+                          stroke="black"
+                          stroke-width="4"
+                        />
+                      </svg>{" "}
+                    </span>{" "}
+                  </div>
                 </div>
               </div>
             ) : null}

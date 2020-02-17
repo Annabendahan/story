@@ -279,3 +279,21 @@
   position: relative;
   margin-bottom: 7px !important;
 }
+
+.projets {
+  width: 80%;
+  padding-top: 20vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Fira Code;
+}
+.projets img {
+  max-height: 400px;
+  margin: 20px 0px;
+}
+
+.tina img {
+  margin: 10px;
+}
