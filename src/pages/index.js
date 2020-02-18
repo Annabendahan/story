@@ -26,8 +26,9 @@ class IndexPage extends Component {
     step: 1,
   }
 
-  nextStepHandler = () => {
+  nextStepHandler = e => {
     this.setState({ step: this.state.step + 1 })
+    console.log("event", e)
   }
 
   goEndHandler = () => {
@@ -40,6 +41,14 @@ class IndexPage extends Component {
 
   goBack = () => {
     this.setState({ step: this.state.step - 1 })
+  }
+
+  handleKeyPress = e => {
+    if (e.keyCode === 37) {
+      this.goBack()
+    } else if (e.keyCode === 39) {
+      this.nextStepHandler()
+    }
   }
 
   render() {
@@ -66,7 +75,11 @@ class IndexPage extends Component {
 
         {this.state.step !== 1 ? (
           <div>
-            <div className="back-mobile" onClick={() => this.goBack()}></div>
+            <div
+              className="back-mobile"
+              // onClick={() => this.goBack()}
+              onKeyDown={() => this.goBack()}
+            ></div>
             <div className="back" onClick={() => this.goBack()}>
               {" "}
               <svg
@@ -86,7 +99,12 @@ class IndexPage extends Component {
           </div>
         ) : null}
 
-        <div className="main" onClick={() => this.nextStepHandler()}>
+        <div
+          tabIndex="0"
+          className="main"
+          onClick={() => this.nextStepHandler()}
+          onKeyDown={e => this.handleKeyPress(e)}
+        >
           <div className="content">
             {this.state.step === 1 ? (
               <p>
@@ -104,31 +122,7 @@ class IndexPage extends Component {
                   this.state.step === 4 ? (
                     <p>
                       {" "}
-                      Je suis{" "}
-                      <span className="text">
-                        {" "}
-                        Anna Bendahan{" "}
-                        <svg
-                          style={{
-                            position: "absolute",
-                            left: "0px",
-                            bottom: "-2px",
-                          }}
-                          width="140"
-                          height="3"
-                          viewBox="0 0 140 3"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <line
-                            y1="1.75"
-                            x2="140"
-                            y2="1.75"
-                            stroke="black"
-                            stroke-width="4"
-                          />
-                        </svg>{" "}
-                      </span>{" "}
+                      Je suis <b>Anna Bendahan </b>
                     </p>
                   ) : null}
 
@@ -143,31 +137,7 @@ class IndexPage extends Component {
             {this.state.step === 5 || this.state.step === 6 ? (
               <div>
                 <p>
-                  Je suis{" "}
-                  <span className="text">
-                    {" "}
-                    développeuse web{" "}
-                    <svg
-                      style={{
-                        position: "absolute",
-                        left: "0px",
-                        bottom: "-2px",
-                      }}
-                      width="170"
-                      height="3"
-                      viewBox="0 0 170 3"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <line
-                        y1="1.75"
-                        x2="170"
-                        y2="1.75"
-                        stroke="black"
-                        stroke-width="4"
-                      />
-                    </svg>{" "}
-                  </span>{" "}
+                  Je suis <b>développeuse web </b>
                   en freelance depuis 2 ans <br />
                   <br />
                 </p>
@@ -200,7 +170,9 @@ class IndexPage extends Component {
                 <p>
                   Comme le site d'
                   <span className="text">
-                    Alice Thonnier{" "}
+                    <a href="https://alicethonnier.netlify.com/" target="blank">
+                      Alice Thonnier{" "}
+                    </a>
                     <svg
                       className="ex"
                       style={{
@@ -236,7 +208,9 @@ class IndexPage extends Component {
                 <p>
                   Ou celui de l’
                   <span className="text">
-                    ASAF{" "}
+                    <a href="https://jeskieaveclasaf.fr/" target="blank">
+                      ASAF{" "}
+                    </a>
                     <svg
                       style={{
                         position: "absolute",
@@ -367,7 +341,9 @@ class IndexPage extends Component {
                 {" "}
                 Comme, par exemple, pour le site de{" "}
                 <span className="text">
-                  Quentin Mameri{" "}
+                  <a href="http://www.qm-avocat.com/" target="blank">
+                    Quentin Mameri
+                  </a>
                   <svg
                     style={{
                       position: "absolute",
@@ -387,8 +363,8 @@ class IndexPage extends Component {
                       stroke="black"
                       stroke-width="4"
                     />
-                  </svg>{" "}
-                </span>{" "}
+                  </svg>
+                </span>
                 , avocat{" "}
               </p>
             ) : null}
@@ -404,7 +380,10 @@ class IndexPage extends Component {
                       {" "}
                       Pour l'interface, j'utilise{" "}
                       <span className="text">
-                        Gatsby.js{" "}
+                        <a href="https://www.gatsbyjs.org/" target="blank">
+                          {" "}
+                          Gatsby.js{" "}
+                        </a>
                         <svg
                           style={{
                             position: "absolute",
@@ -480,7 +459,10 @@ class IndexPage extends Component {
                         {" "}
                         le tout lié par{" "}
                         <span className="text">
-                          GraphQL{" "}
+                          <a href="https://graphql.org/" target="blank">
+                            {" "}
+                            GraphQL{" "}
+                          </a>
                           <svg
                             style={{
                               position: "absolute",
@@ -513,7 +495,9 @@ class IndexPage extends Component {
                       Pour permettre au client de gérer lui-même le contenu de
                       son site, j'utilise{" "}
                       <span className="text">
-                        WordpressCMS{" "}
+                        <a href="https://fr.wordpress.org/" target="blank">
+                          WordpressCMS
+                        </a>
                         <svg
                           style={{
                             position: "absolute",
@@ -533,9 +517,9 @@ class IndexPage extends Component {
                             stroke="black"
                             stroke-width="4"
                           />
-                        </svg>{" "}
-                      </span>{" "}
-                      .{" "}
+                        </svg>
+                      </span>
+                      .
                     </p>
                   </div>
                 ) : null}
@@ -552,7 +536,9 @@ class IndexPage extends Component {
                 {" "}
                 Enfin, j’interviens sur des sites{" "}
                 <span className="text">
-                  wordpress{" "}
+                  <a href="https://fr.wordpress.org/" target="blank">
+                    wordpress
+                  </a>
                   <svg
                     style={{
                       position: "absolute",
@@ -576,7 +562,9 @@ class IndexPage extends Component {
                 </span>{" "}
                 ou{" "}
                 <span className="text">
-                  cargo{" "}
+                  <a href="https://cargo.site/" target="blank">
+                    cargo{" "}
+                  </a>
                   <svg
                     style={{
                       position: "absolute",
@@ -613,7 +601,8 @@ class IndexPage extends Component {
               this.state.step === 26 ||
               this.state.step === 27 ? (
                 <b>
-                  • Pour ajuster un footer <br />
+                  • Pour ajuster un
+                  <br />
                 </b>
               ) : null}
               {this.state.step === 24 ||
@@ -1044,7 +1033,10 @@ class IndexPage extends Component {
         </div>
 
         {this.state.step < 42 ? (
-          <div className="footer">
+          <div
+            className="footer
+          "
+          >
             <p onClick={() => this.goEndHandler()}>
               Aller directement à la fin{" "}
               <svg
@@ -1062,7 +1054,10 @@ class IndexPage extends Component {
             </p>
           </div>
         ) : (
-          <div className="footer">
+          <div
+            className="footer
+          "
+          >
             <p onClick={() => this.resetHandler()}>
               <svg
                 width="34"
