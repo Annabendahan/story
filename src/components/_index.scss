@@ -2,7 +2,7 @@
   font-family: Fira Code;
   text-align: center;
   font-weight: 300;
-  background: map-get($colors, beige);
+
   color: map-get($colors, grey);
   &__blue {
     color: map-get($colors, blue);
@@ -17,7 +17,7 @@
     text-decoration: none;
     color: map-get($colors, grey);
   }
-  padding-top: 30%;
+  padding-top: 50%;
   @include breakpoint(s) {
     padding-top: 20vh;
   }
@@ -33,8 +33,26 @@
   max-width: 80%;
 }
 
+.cargo {
+  span {
+    font-size: 0.9rem;
+  }
+  img {
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
 .techs {
   position: relative;
+  span {
+    font-size: 0.9rem;
+  }
+
+  img {
+    margin-right: 10px;
+    margin-top: 5px;
+  }
 }
 
 .mi {
@@ -120,7 +138,7 @@
 .recap {
   text-align: left;
 
-  margin-top: -50px;
+  margin-top: -120px;
   width: 300px;
   @include breakpoint(m) {
     justify-content: space-between;
@@ -296,4 +314,8 @@
 
 .tina img {
   margin: 10px;
+}
+
+.r img {
+  margin: 0px 10px;
 }

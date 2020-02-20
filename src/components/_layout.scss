@@ -206,7 +206,7 @@ body {
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
-  background: map-get($colors, beige);
+
   overflow-x: hidden;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -633,16 +633,23 @@ pre tt:after {
   font-family: "Fira Code";
   height: 10vh;
   font-size: 0.6rem;
-  background: map-get($colors, beige);
+
   margin: auto;
-  color: black;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 200px;
+  color: map-get($colors, grey);
+
+  position: absolute;
+  top: 5px;
+  right: 20px;
 
   p {
     font-size: 0.6rem;
+    font-family: "Fira Code";
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    img {
+      margin: 0px 10px;
+    }
     &:hover {
       cursor: pointer;
     }
