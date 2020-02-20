@@ -18,6 +18,7 @@ import arrowdown from "../images/arrowdown.png"
 import underl from "../images/underl.png"
 import smallunderl from "../images/smallunderl.png"
 import smallround from "../images/smallround.png"
+import round from "../images/round.png"
 import doublearrow from "../images/doublearrow.png"
 import letout from "../images/letout.png"
 
@@ -235,7 +236,7 @@ class IndexPage extends Component {
                 this.state.step === 15 ||
                 this.state.step === 16 ? (
                   <span style={{ display: "flex" }}>
-                    <img src={smallround} alt="round" /> React.js
+                    <img width="5px" src={round} alt="round" /> React.js
                     <br />
                   </span>
                 ) : null}
@@ -246,7 +247,7 @@ class IndexPage extends Component {
                 this.state.step === 15 ||
                 this.state.step === 16 ? (
                   <span style={{ display: "flex" }}>
-                    <img src={smallround} alt="round" /> Javascript
+                    <img width="5px" src={round} alt="round" /> Javascript
                     <br />
                   </span>
                 ) : null}
@@ -256,7 +257,7 @@ class IndexPage extends Component {
                 this.state.step === 15 ||
                 this.state.step === 16 ? (
                   <span style={{ display: "flex" }}>
-                    <img src={smallround} alt="round" /> Gatsby.js
+                    <img width="5px" src={round} alt="round" /> Gatsby.js
                     <br />
                   </span>
                 ) : null}
@@ -265,7 +266,7 @@ class IndexPage extends Component {
                 this.state.step === 15 ||
                 this.state.step === 16 ? (
                   <span style={{ display: "flex" }}>
-                    <img src={smallround} alt="round" /> SCSS
+                    <img width="5px" src={round} alt="round" /> SCSS
                     <br />
                   </span>
                 ) : null}
@@ -273,19 +274,19 @@ class IndexPage extends Component {
                 this.state.step === 15 ||
                 this.state.step === 16 ? (
                   <span style={{ display: "flex" }}>
-                    <img src={smallround} alt="round" /> Vue.js
+                    <img width="5px" src={round} alt="round" /> Vue.js
                     <br />
                   </span>
                 ) : null}
                 {this.state.step === 15 || this.state.step === 16 ? (
                   <span style={{ display: "flex" }}>
-                    <img src={smallround} alt="round" /> GraphQL
+                    <img width="5px" src={round} alt="round" /> GraphQL
                     <br />
                   </span>
                 ) : null}
                 {this.state.step === 16 ? (
                   <span style={{ display: "flex" }}>
-                    <img src={smallround} alt="round" /> Netlify
+                    <img width="5px" src={round} alt="round" /> Netlify
                     <br />
                   </span>
                 ) : null}
@@ -475,7 +476,8 @@ class IndexPage extends Component {
               this.state.step === 26 ||
               this.state.step === 27 ? (
                 <span style={{ display: "flex" }}>
-                  <img src={smallround} alt="round" /> Pour ajuster un footer
+                  <img width="5px" src={round} alt="round" /> Pour ajuster un
+                  footer
                   <br />
                 </span>
               ) : null}
@@ -484,7 +486,7 @@ class IndexPage extends Component {
               this.state.step === 26 ||
               this.state.step === 27 ? (
                 <span style={{ display: "flex" }}>
-                  <img src={smallround} alt="round" /> Trier des articles
+                  <img width="5px" src={round} alt="round" /> Trier des articles
                   <br />
                 </span>
               ) : null}
@@ -492,13 +494,13 @@ class IndexPage extends Component {
               this.state.step === 26 ||
               this.state.step === 27 ? (
                 <span style={{ display: "flex" }}>
-                  <img src={smallround} alt="round" /> Changer un header
+                  <img width="5px" src={round} alt="round" /> Changer un header
                   <br />
                 </span>
               ) : null}
               {this.state.step === 26 || this.state.step === 27 ? (
                 <span style={{ display: "flex" }}>
-                  <img src={smallround} alt="round" /> Modifier une page
+                  <img width="5px" src={round} alt="round" /> Modifier une page
                   <br />
                 </span>
               ) : null}
