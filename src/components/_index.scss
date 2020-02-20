@@ -36,11 +36,13 @@
 .cargo {
   span {
     font-size: 0.9rem;
-    margin: -10px;
+    margin: -10px 0px;
   }
   img {
     margin-right: 10px;
     margin-top: 10px;
+    width: 5px;
+    height: 5px;
   }
 }
 
@@ -48,12 +50,14 @@
   position: relative;
   span {
     font-size: 0.9rem;
-    margin: -10px;
+    margin: -10px 0px;
   }
 
   img {
     margin-right: 10px;
     margin-top: 10px;
+    width: 5px;
+    height: 5px;
   }
 }
 
