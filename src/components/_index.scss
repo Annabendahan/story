@@ -241,9 +241,12 @@
   font-size: 10px;
   position: relative;
   z-index: 2;
-  transform: rotate(90deg);
-  width: 100px;
-  animation: rotate 1s linear infinite;
+  img {
+    transform: rotate(90deg);
+    width: 100px;
+    animation: rotate 1s linear infinite;
+    transform-origin: center;
+  }
 }
 
 @keyframes rotate {

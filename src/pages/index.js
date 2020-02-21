@@ -410,7 +410,7 @@ class IndexPage extends Component {
                 {this.state.step === 21 ? (
                   <div>
                     <div className="arrowMobile">
-                      <img src={letout} alt="arrow" />
+                      <img src={letout} height="200px" alt="arrow" />
                     </div>
                     <div className="arrow">
                       <img width="200px" src={doublearrow} alt="arrow" />
