@@ -22,6 +22,7 @@ import round from "../images/round.png"
 import doublearrow from "../images/doublearrow.png"
 import letout from "../images/letout.png"
 import dash from "../images/dashh.png"
+import load from "../images/load.png"
 
 import footvid from "../images/footvid.mp4"
 
@@ -218,7 +219,9 @@ class IndexPage extends Component {
                 <video className="asafvid" playsInline autoPlay loop muted>
                   <source src={alicev} type="video/mp4" />
                 </video>
-                <div class="loader">Loading...</div>
+                <div class="loader">
+                  <img src={load} alt="load" />
+                </div>
               </div>
             ) : null}
             {this.state.step === 8 ? (
@@ -247,7 +250,9 @@ class IndexPage extends Component {
                 <video className="asafvid" playsInline autoPlay loop muted>
                   <source src={asafv} type="video/mp4" />
                 </video>
-                <div class="loader">Loading...</div>
+                <div class="loader">
+                  <img src={load} alt="load" />
+                </div>
               </div>
             ) : null}
             <div className="techs">
