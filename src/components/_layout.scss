@@ -630,6 +630,8 @@ pre tt:after {
 }
 
 .footer {
+  top: 5px;
+  right: 1%;
   font-family: "Fira Code";
   height: 10vh;
   font-size: 0.6rem;
@@ -638,8 +640,10 @@ pre tt:after {
   color: map-get($colors, grey);
 
   position: absolute;
-  top: 5px;
-  right: 20px;
+  @include breakpoint(s) {
+    top: 20px;
+    right: 5%;
+  }
 
   p {
     font-size: 0.6rem;
@@ -649,6 +653,10 @@ pre tt:after {
     align-items: center;
     img {
       margin: 0px 10px;
+      width: 30px !important;
+      @include breakpoint(s) {
+        width: 50px !important;
+      }
     }
     &:hover {
       cursor: pointer;

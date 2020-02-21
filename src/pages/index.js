@@ -21,6 +21,7 @@ import smallround from "../images/smallround.png"
 import round from "../images/round.png"
 import doublearrow from "../images/doublearrow.png"
 import letout from "../images/letout.png"
+import dash from "../images/dashh.png"
 
 import footvid from "../images/footvid.mp4"
 
@@ -34,23 +35,34 @@ import img from "../images/IMG_0356 copie.jpg"
 class IndexPage extends Component {
   state = {
     step: 1,
+    l: 0,
+    m: 0,
   }
 
   nextStepHandler = e => {
-    this.setState({ step: this.state.step + 1 })
-    console.log("event", e)
+    if (this.state.step >= 0 && this.state.step < 42) {
+      this.setState({
+        step: this.state.step + 1,
+        l: this.state.l + 5,
+        m: this.state.m + 3,
+      })
+    }
   }
 
   goEndHandler = () => {
-    this.setState({ step: 42 })
+    this.setState({ step: 42, l: 210, m: 126 })
   }
 
   resetHandler = () => {
-    this.setState({ step: 1 })
+    this.setState({ step: 1, l: 0, m: 0 })
   }
 
   goBack = () => {
-    this.setState({ step: this.state.step - 1 })
+    this.setState({
+      step: this.state.step - 1,
+      l: this.state.l - 6,
+      m: this.state.m - 3,
+    })
   }
 
   handleKeyPress = e => {
@@ -83,6 +95,38 @@ class IndexPage extends Component {
       <Layout>
         <SEO title="Accueil" />
 
+        <div className="jauge">
+          <div className="dash">
+            <img src={dash} alt="d" />
+            <img
+              style={{
+                position: "absolute",
+                top: "4px",
+                left: `${this.state.l}px`,
+              }}
+              src={round}
+              width="10px"
+              alt="d"
+            />
+          </div>
+        </div>
+
+        <div className="mobilejauge">
+          <div className="mobiledash">
+            <img src={dash} alt="d" />
+            <img
+              style={{
+                position: "absolute",
+                top: "2px",
+                left: `${this.state.m}px`,
+              }}
+              src={round}
+              width="7px"
+              alt="d"
+            />
+          </div>
+        </div>
+
         {this.state.step !== 1 ? (
           <div>
             <div
@@ -92,7 +136,7 @@ class IndexPage extends Component {
             ></div>
             <div className="back" onClick={() => this.goBack()}>
               {" "}
-              <img src={arrowleft} alt="arrow" />
+              <img src={arrowleft} width="50px" alt="arrow" />
             </div>
           </div>
         ) : null}
@@ -139,7 +183,7 @@ class IndexPage extends Component {
             ) : null}
             {this.state.step === 6 ? (
               <div>
-                <img src={arrowdown} alt="arrow" />
+                <img src={arrowdown} width="50px" alt="arrow" />
                 <p className="short">
                   <br />
                   <br />
@@ -649,7 +693,8 @@ class IndexPage extends Component {
                   margin: "auto",
                 }}
               >
-                Petit récapitulatif <img src={arrowright} alt="arrow" />
+                Petit récapitulatif{" "}
+                <img src={arrowright} width="50px" alt="arrow" />
               </p>
             ) : null}
             {this.state.step > 41 ? (
@@ -816,7 +861,7 @@ class IndexPage extends Component {
           >
             <p onClick={() => this.goEndHandler()}>
               <span>Aller directement à la fin </span>{" "}
-              <img src={arrowright} alt="arrow" />
+              <img src={arrowright} width="50px" alt="arrow" />
             </p>
           </div>
         ) : (
@@ -825,7 +870,7 @@ class IndexPage extends Component {
           "
           >
             <p onClick={() => this.resetHandler()}>
-              <img src={arrowleft} alt="arrow" /> recommencer
+              <img src={arrowleft} width="50px" alt="arrow" /> recommencer
             </p>
           </div>
         )}
