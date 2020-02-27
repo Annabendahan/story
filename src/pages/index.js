@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import mi from "../images/miself.png"
+import mi from "../images/t3st.jpeg"
 import foot9 from "../images/foot9.png"
 import foot3 from "../images/foot3.png"
 import foot5 from "../images/foot5.png"
@@ -201,8 +201,7 @@ class IndexPage extends Component {
                     <a href="https://alicethonnier.netlify.com/" target="blank">
                       Alice Thonnier{" "}
                     </a>
-                    <img
-                      className="ex"
+                    <svg
                       style={{
                         position: "absolute",
                         left: "0px",
@@ -211,8 +210,19 @@ class IndexPage extends Component {
                         width: "150px",
                         height: "8px",
                       }}
-                      src={underl}
-                    />{" "}
+                      height="3"
+                      viewBox="0 0 85 3"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="1.75"
+                        x2="85"
+                        y2="1.75"
+                        stroke="black"
+                        stroke-width="2.5"
+                      />
+                    </svg>
                   </span>{" "}
                   , styliste et modéliste
                 </p>
@@ -232,17 +242,28 @@ class IndexPage extends Component {
                     <a href="https://jeskieaveclasaf.fr/" target="blank">
                       ASAF{" "}
                     </a>
-                    <img
+                    <svg
                       style={{
                         position: "absolute",
                         left: "0px",
                         bottom: "-5px",
 
-                        width: "40px",
                         height: "8px",
                       }}
-                      src={smallunderl}
-                    />{" "}
+                      width="40px"
+                      height="3"
+                      viewBox="0 0 85 3"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="1.75"
+                        x2="85"
+                        y2="1.75"
+                        stroke="black"
+                        stroke-width="10.5"
+                      />
+                    </svg>
                   </span>{" "}
                   (association de ski d’AIR FRANCE)
                 </p>
@@ -359,7 +380,7 @@ class IndexPage extends Component {
                   <a href="http://www.qm-avocat.com/" target="blank">
                     Quentin Mameri
                   </a>
-                  <img
+                  <svg
                     style={{
                       position: "absolute",
                       left: "0px",
@@ -368,8 +389,19 @@ class IndexPage extends Component {
                       width: "150px",
                       height: "8px",
                     }}
-                    src={underl}
-                  />{" "}
+                    height="3"
+                    viewBox="0 0 85 3"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line
+                      y1="1.75"
+                      x2="85"
+                      y2="1.75"
+                      stroke="black"
+                      stroke-width="2.5"
+                    />
+                  </svg>
                 </span>
                 , avocat{" "}
               </p>
@@ -390,7 +422,7 @@ class IndexPage extends Component {
                           {" "}
                           Gatsby.js{" "}
                         </a>
-                        <img
+                        <svg
                           style={{
                             position: "absolute",
                             left: "0px",
@@ -399,8 +431,19 @@ class IndexPage extends Component {
                             width: "95px",
                             height: "8px",
                           }}
-                          src={underl}
-                        />{" "}
+                          height="3"
+                          viewBox="0 0 85 3"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <line
+                            y1="1.75"
+                            x2="85"
+                            y2="1.75"
+                            stroke="black"
+                            stroke-width="4.5"
+                          />
+                        </svg>
                       </span>{" "}
                       qui permet une mise en page et un design totalement
                       libres.{" "}
@@ -422,7 +465,7 @@ class IndexPage extends Component {
                             {" "}
                             GraphQL{" "}
                           </a>
-                          <img
+                          <svg
                             style={{
                               position: "absolute",
                               left: "0px",
@@ -431,8 +474,19 @@ class IndexPage extends Component {
                               width: "80px",
                               height: "8px",
                             }}
-                            src={underl}
-                          />{" "}
+                            height="3"
+                            viewBox="0 0 85 3"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <line
+                              y1="1.75"
+                              x2="85"
+                              y2="1.75"
+                              stroke="black"
+                              stroke-width="5.5"
+                            />
+                          </svg>
                         </span>{" "}
                       </p>{" "}
                     </div>
@@ -448,7 +502,7 @@ class IndexPage extends Component {
                         <a href="https://fr.wordpress.org/" target="blank">
                           WordpressCMS
                         </a>
-                        <img
+                        <svg
                           style={{
                             position: "absolute",
                             left: "0px",
@@ -457,8 +511,19 @@ class IndexPage extends Component {
                             width: "130px",
                             height: "8px",
                           }}
-                          src={underl}
-                        />{" "}
+                          height="3"
+                          viewBox="0 0 85 3"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <line
+                            y1="1.75"
+                            x2="85"
+                            y2="1.75"
+                            stroke="black"
+                            stroke-width="3.5"
+                          />
+                        </svg>
                       </span>
                       .
                     </p>
@@ -480,7 +545,7 @@ class IndexPage extends Component {
                   <a href="https://fr.wordpress.org/" target="blank">
                     wordpress
                   </a>
-                  <img
+                  <svg
                     style={{
                       position: "absolute",
                       left: "0px",
@@ -489,15 +554,26 @@ class IndexPage extends Component {
                       width: "95px",
                       height: "8px",
                     }}
-                    src={underl}
-                  />{" "}
+                    height="3"
+                    viewBox="0 0 85 3"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line
+                      y1="1.75"
+                      x2="85"
+                      y2="1.75"
+                      stroke="black"
+                      stroke-width="4.5"
+                    />
+                  </svg>
                 </span>{" "}
                 ou{" "}
                 <span className="text">
                   <a href="https://cargo.site/" target="blank">
                     cargo{" "}
                   </a>
-                  <img
+                  <svg
                     style={{
                       position: "absolute",
                       left: "0px",
@@ -506,8 +582,19 @@ class IndexPage extends Component {
                       width: "55px",
                       height: "8px",
                     }}
-                    src={underl}
-                  />{" "}
+                    height="3"
+                    viewBox="0 0 85 3"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line
+                      y1="1.75"
+                      x2="85"
+                      y2="1.75"
+                      stroke="black"
+                      stroke-width="7.5"
+                    />
+                  </svg>
                 </span>{" "}
               </p>
             ) : null}
@@ -578,17 +665,28 @@ class IndexPage extends Component {
                     >
                       @usparisxifeminine
                     </a>
-                    <img
+                    <svg
                       style={{
                         position: "absolute",
                         left: "0px",
                         bottom: "-5px",
 
-                        width: "190px",
+                        width: "195px",
                         height: "8px",
                       }}
-                      src={underl}
-                    />{" "}
+                      height="3"
+                      viewBox="0 0 85 3"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="1.75"
+                        x2="85"
+                        y2="1.75"
+                        stroke="black"
+                        stroke-width="2.5"
+                      />
+                    </svg>
                   </span>{" "}
                 </p>{" "}
               </div>
@@ -628,7 +726,7 @@ class IndexPage extends Component {
                     >
                       instagram{" "}
                     </a>
-                    <img
+                    <svg
                       style={{
                         position: "absolute",
                         left: "0px",
@@ -637,8 +735,19 @@ class IndexPage extends Component {
                         width: "95px",
                         height: "8px",
                       }}
-                      src={underl}
-                    />{" "}
+                      height="3"
+                      viewBox="0 0 85 3"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="1.75"
+                        x2="85"
+                        y2="1.75"
+                        stroke="black"
+                        stroke-width="4.5"
+                      />
+                    </svg>
                   </span>{" "}
                 </p>
               ) : null}
@@ -654,7 +763,7 @@ class IndexPage extends Component {
                         CV
                       </a>
                     </a>
-                    <img
+                    <svg
                       style={{
                         position: "absolute",
                         left: "0px",
@@ -663,8 +772,19 @@ class IndexPage extends Component {
                         width: "25px",
                         height: "8px",
                       }}
-                      src={smallunderl}
-                    />{" "}
+                      height="3"
+                      viewBox="0 0 85 3"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        y1="1.75"
+                        x2="85"
+                        y2="1.75"
+                        stroke="black"
+                        stroke-width="15.5"
+                      />
+                    </svg>
                   </span>{" "}
                 </p>
               ) : null}
@@ -720,7 +840,7 @@ class IndexPage extends Component {
                       >
                         linkedin{" "}
                       </a>
-                      <img
+                      <svg
                         style={{
                           position: "absolute",
                           left: "0px",
@@ -729,8 +849,19 @@ class IndexPage extends Component {
                           width: "95px",
                           height: "8px",
                         }}
-                        src={underl}
-                      />{" "}
+                        height="3"
+                        viewBox="0 0 85 3"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          y1="1.75"
+                          x2="85"
+                          y2="1.75"
+                          stroke="black"
+                          stroke-width="4.5"
+                        />
+                      </svg>
                     </span>{" "}
                   </p>
                   <p>
@@ -741,17 +872,28 @@ class IndexPage extends Component {
                       >
                         instagram{" "}
                       </a>
-                      <img
+                      <svg
                         style={{
                           position: "absolute",
                           left: "0px",
                           bottom: "-5px",
 
-                          width: "100px",
+                          width: "95px",
                           height: "8px",
                         }}
-                        src={underl}
-                      />{" "}
+                        height="3"
+                        viewBox="0 0 85 3"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          y1="1.75"
+                          x2="85"
+                          y2="1.75"
+                          stroke="black"
+                          stroke-width="4.5"
+                        />
+                      </svg>
                     </span>{" "}
                   </p>
                   <p>
@@ -764,7 +906,7 @@ class IndexPage extends Component {
                           CV
                         </a>
                       </a>
-                      <img
+                      <svg
                         style={{
                           position: "absolute",
                           left: "0px",
@@ -773,8 +915,19 @@ class IndexPage extends Component {
                           width: "25px",
                           height: "8px",
                         }}
-                        src={smallunderl}
-                      />{" "}
+                        height="3"
+                        viewBox="0 0 85 3"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          y1="1.75"
+                          x2="85"
+                          y2="1.75"
+                          stroke="black"
+                          stroke-width="17.5"
+                        />
+                      </svg>
                     </span>{" "}
                     <p />
                   </p>
@@ -785,17 +938,28 @@ class IndexPage extends Component {
                       <a href="http://www.qm-avocat.com/" target="blank">
                         www.qm-avocat.com{" "}
                       </a>
-                      <img
+                      <svg
                         style={{
                           position: "absolute",
                           left: "0px",
                           bottom: "-5px",
 
-                          width: "180px",
+                          width: "185px",
                           height: "8px",
                         }}
-                        src={underl}
-                      />{" "}
+                        height="3"
+                        viewBox="0 0 85 3"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          y1="1.75"
+                          x2="85"
+                          y2="1.75"
+                          stroke="black"
+                          stroke-width="2.5"
+                        />
+                      </svg>
                     </span>{" "}
                   </p>
                   <p>
@@ -804,19 +968,30 @@ class IndexPage extends Component {
                         href="https://alicethonnier.netlify.com/"
                         target="blank"
                       >
-                        alicethonnier.netlify.com{" "}
+                        alicethonnier.com{" "}
                       </a>
-                      <img
+                      <svg
                         style={{
                           position: "absolute",
                           left: "0px",
                           bottom: "-5px",
 
-                          width: "270px",
+                          width: "225px",
                           height: "8px",
                         }}
-                        src={underl}
-                      />{" "}
+                        height="3"
+                        viewBox="0 0 105 3"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          y1="1.75"
+                          x2="85"
+                          y2="1.75"
+                          stroke="black"
+                          stroke-width="2.5"
+                        />
+                      </svg>
                     </span>{" "}
                   </p>
                   <p>
@@ -824,7 +999,7 @@ class IndexPage extends Component {
                       <a href="https://jeskieaveclasaf.fr/" target="blank">
                         jeskieaveclasaf.fr{" "}
                       </a>
-                      <img
+                      <svg
                         style={{
                           position: "absolute",
                           left: "0px",
@@ -833,24 +1008,46 @@ class IndexPage extends Component {
                           width: "200px",
                           height: "8px",
                         }}
-                        src={underl}
-                      />{" "}
+                        height="3"
+                        viewBox="0 0 85 3"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          y1="1.75"
+                          x2="85"
+                          y2="1.75"
+                          stroke="black"
+                          stroke-width="2.5"
+                        />
+                      </svg>
                     </span>{" "}
                   </p>
                   <div>
                     <span className="text">
                       <Link to="/projets">Autres projets </Link>
-                      <img
+                      <svg
                         style={{
                           position: "absolute",
                           left: "0px",
-                          bottom: "-35px",
+                          bottom: "-5px",
 
                           width: "150px",
                           height: "8px",
                         }}
-                        src={underl}
-                      />{" "}
+                        height="3"
+                        viewBox="0 0 85 3"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          y1="1.75"
+                          x2="85"
+                          y2="1.75"
+                          stroke="black"
+                          stroke-width="3"
+                        />
+                      </svg>
                     </span>{" "}
                   </div>
                 </div>
