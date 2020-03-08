@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,300i,400,400i,500,500i,700|Fira+Code:300,400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,300i,400,400i,500,500i,700|Fira+Code:300,400,500,600,700|Cutive+Mono&display=swap");
 
 html {
   font-family: sans-serif;
@@ -206,6 +206,7 @@ body {
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
+  background: map-get($colors, beige);
 
   overflow-x: hidden;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -388,10 +389,12 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
+  line-height: 1;
   margin-bottom: 1.45rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
+
   @include breakpoint(s) {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 figure {
@@ -632,7 +635,7 @@ pre tt:after {
 .footer {
   top: 5px;
   right: 1%;
-  font-family: "Fira Code";
+  font-family: Cutive Mono;
   height: 10vh;
   font-size: 0.6rem;
 

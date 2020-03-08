@@ -1,12 +1,12 @@
 .main {
-  font-family: Roboto Mono;
+  font-family: Cutive Mono;
   text-align: center;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 0.8rem;
 
   color: black;
   &__blue {
-    color: map-get($colors, blue);
+    color: map-get($colors, beige);
   }
   min-height: 100vh;
   width: 100%;
@@ -15,7 +15,10 @@
 .content {
   margin: auto;
   a {
-    text-decoration: none;
+    text-decoration: underline;
+    margin-bottom: -1px;
+    // border-bottom: 3px solid black;
+
     color: black;
   }
   padding-top: 40%;
@@ -36,8 +39,7 @@
 
 .cargo {
   span {
-    font-size: 0.9rem;
-    margin: -10px 0px;
+    font-size: 1rem;
   }
   img {
     margin-right: 10px;
@@ -50,8 +52,7 @@
 .techs {
   position: relative;
   span {
-    font-size: 0.9rem;
-    margin: -10px 0px;
+    font-size: 1rem;
   }
 
   img {
@@ -145,7 +146,7 @@
 .recap {
   text-align: left;
 
-  margin-top: -80px;
+  margin-top: -40px;
   width: 300px;
   @include breakpoint(m) {
     justify-content: space-between;
@@ -160,7 +161,6 @@
     margin: 5px 0px;
   }
   div {
-    margin: 40px 0px;
   }
 }
 
@@ -294,7 +294,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: Roboto Mono;
+  font-family: Cutive Mono;
 }
 .projets img {
   max-height: 400px;
@@ -324,7 +324,15 @@
 .dash {
   position: relative;
   width: 210px;
+
   margin: auto;
+}
+
+.dash2 {
+  margin: 0px 10px;
+  svg {
+    margin-bottom: -2px;
+  }
 }
 
 .mobilejauge {
@@ -343,4 +351,21 @@
   position: relative;
   width: 126px;
   margin: auto;
+}
+
+.recap-content {
+  border: 2px solid black;
+}
+
+.footer:hover svg {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: dash 1s linear forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
