@@ -425,8 +425,7 @@ class IndexPage extends Component {
                           Gatsby.js
                         </a>
                       </span>{" "}
-                      qui permet une mise en page et un design totalement
-                      libres.{" "}
+                      qui permet une mise en page et undesign totalement libres.{" "}
                     </p>{" "}
                   </div>
                 ) : null}
