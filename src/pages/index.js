@@ -1,16 +1,18 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
 
+import Popup from "../components/popup"
+
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import mi from "../images/t3st.jpeg"
-import foot9 from "../images/foot9.png"
-import foot3 from "../images/foot3.png"
-import foot5 from "../images/foot5.png"
+import mi from "../images/mi.png"
+import foot1 from "../images/fooot1.png"
+import foot2 from "../images/fooot2.png"
+import foot3 from "../images/fooot3.png"
 import foot4 from "../images/foot4.png"
 import nokia from "../images/nokia.png"
-import cv from "../images/CVJAN2020.pdf"
+import cv from "../images/CVFEV2020.pdf"
 
 import arrowright from "../images/arrowright.png"
 import arrowleft from "../images/arrowleft.png"
@@ -38,6 +40,8 @@ class IndexPage extends Component {
     step: 1,
     l: 0,
     m: 0,
+    showPopup: false,
+    img: "mi",
   }
 
   nextStepHandler = e => {
@@ -58,6 +62,10 @@ class IndexPage extends Component {
     this.setState({ step: 1, l: 0, m: 0 })
   }
 
+  openPopup = src => {
+    this.setState({ showPopup: true, img: src })
+  }
+
   goBack = () => {
     this.setState({
       step: this.state.step - 1,
@@ -72,6 +80,10 @@ class IndexPage extends Component {
     } else if (e.keyCode === 39) {
       this.nextStepHandler()
     }
+  }
+
+  closePopup = () => {
+    this.setState({ showPopup: false })
   }
 
   render() {
@@ -95,6 +107,10 @@ class IndexPage extends Component {
     return (
       <Layout>
         <SEO title="Accueil" />
+
+        <div onClick={() => this.closePopup()}>
+          {this.state.showPopup ? <Popup img={this.state.img} /> : null}{" "}
+        </div>
 
         <div className="jauge">
           <div className="dash">
@@ -568,17 +584,30 @@ class IndexPage extends Component {
                 this.state.step === 31 ||
                 this.state.step === 32 ||
                 this.state.step === 33 ? (
-                  <img src={foot3} className="footpic" alt="mi" />
+                  <img
+                    src={foot1}
+                    className="footpic"
+                    alt="mi"
+                    onClick={() => this.openPopup(foot1)}
+                  />
                 ) : null}
                 {this.state.step === 31 ||
                 this.state.step === 32 ||
                 this.state.step === 33 ? (
-                  <video className="footpic" playsInline autoPlay loop muted>
-                    <source src={footvid} type="video/mp4" />
-                  </video>
+                  <img
+                    src={foot2}
+                    className="footpic"
+                    alt="mi"
+                    onClick={() => this.openPopup(foot2)}
+                  />
                 ) : null}
                 {this.state.step === 32 || this.state.step === 33 ? (
-                  <img src={foot5} className="footpic" alt="mi" />
+                  <img
+                    src={foot3}
+                    className="footpic"
+                    alt="mi"
+                    onClick={() => this.openPopup(foot3)}
+                  />
                 ) : null}
                 {this.state.step === 33 ? null : null}
               </div>

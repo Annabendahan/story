@@ -369,3 +369,22 @@
     stroke-dashoffset: 0;
   }
 }
+
+.popup {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  img {
+    max-height: 80%;
+    max-width: 80%;
+  }
+}
