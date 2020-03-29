@@ -10,7 +10,8 @@ import mi from "../images/mi.png"
 import foot1 from "../images/fooot1.png"
 import foot2 from "../images/fooot2.png"
 import foot3 from "../images/fooot3.png"
-import foot4 from "../images/foot4.png"
+import alicemain from "../images/alicemain.png"
+import asafgrain from "../images/asafgrain.png"
 import nokia from "../images/nokia.png"
 import cv from "../images/CVFEV2020.pdf"
 
@@ -288,12 +289,12 @@ class IndexPage extends Component {
                   </span>
                   , styliste et modéliste
                 </p>
-                <video className="asafvid" playsInline autoPlay loop muted>
-                  <source src={alicev} type="video/mp4" />
-                </video>
-                <div class="loader">
-                  <img src={load} alt="load" />
+                <div className="asafvid">
+                  <img src={alicemain} alt="alice" />
                 </div>
+                {/* <div class="load">
+                  <img src={load} alt="load" />
+                </div> */}
               </div>
             ) : null}
             {this.state.step === 8 ? (
@@ -308,11 +309,8 @@ class IndexPage extends Component {
                   (association de ski d’AIR FRANCE)
                 </p>
 
-                <video className="asafvid" playsInline autoPlay loop muted>
-                  <source src={asafv} type="video/mp4" />
-                </video>
-                <div class="loader">
-                  <img src={load} alt="load" />
+                <div className="asafvid">
+                  <img src={asafgrain} alt="asaf" />
                 </div>
               </div>
             ) : null}
