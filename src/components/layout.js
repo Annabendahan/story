@@ -25,8 +25,29 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
       <div>
+        <div className="header">
+          <p>
+            PORTFOLIO
+            <svg
+              className="dash-thin"
+              width="30"
+              height="1"
+              viewBox="0 0 30 1"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="2.18557e-08"
+                y1="0.75"
+                x2="30"
+                y2="0.750002"
+                stroke="black"
+                stroke-width="0.5"
+              />
+            </svg>
+          </p>
+        </div>
         <main>{children}</main>
       </div>
     </>

@@ -1,0 +1,35 @@
+.footer {
+  display: flex;
+  font-size: 0.8rem;
+
+  z-index: 9999;
+  font-weight: 600;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 2vh;
+  @include breakpoint(m) {
+    bottom: 2vh;
+  }
+
+  @include breakpoint(l) {
+    bottom: 2vh;
+  }
+
+  left: 4%;
+  width: 94%;
+  margin: auto;
+  a {
+    text-decoration: none;
+    font-size: 0.7rem;
+    @include breakpoint(m) {
+      font-size: 0.8rem;
+    }
+  }
+  h5 {
+    font-size: 0.7rem;
+    @include breakpoint(m) {
+      font-size: 0.8rem;
+    }
+  }
+}

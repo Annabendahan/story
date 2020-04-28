@@ -1,0 +1,49 @@
+.project-layout {
+  height: 93vh;
+  width: 100vw;
+  overflow-y: hidden;
+  position: relative;
+  background: red;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &__content {
+    background: grey;
+    display: flex;
+    justify-content: space-between;
+    img {
+      max-width: 30vw;
+      max-height: 30vw;
+    }
+    p {
+      max-width: 40vw;
+
+      @include breakpoint(s) {
+        max-width: 20vw;
+        margin: 60px 30px 0px 60px;
+      }
+    }
+  }
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+}
+
+.linestart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.start-text {
+  position: absolute;
+  top: 10% !important;
+  left: 50%;
+  margin: 0px !important;
+  width: 300px !important;
+}

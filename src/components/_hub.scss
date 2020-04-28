@@ -1,0 +1,230 @@
+.hub {
+  position: relative;
+}
+
+.leftbar {
+  position: fixed;
+  border-left: solid black 2px;
+  background: white;
+  width: 300px;
+  height: 100vh;
+
+  top: 0px;
+  right: -10px;
+
+  &__mobile {
+    display: block;
+    width: 300px;
+    transition: right 0.5s ease-out;
+    z-index: 300;
+    @include breakpoint(s) {
+      display: none;
+    }
+  }
+
+  &__desktop {
+    display: none;
+    width: 300px;
+
+    @include breakpoint(s) {
+      display: block;
+    }
+  }
+  &__blackdiv {
+    background: black;
+    height: 30px;
+    width: 300px;
+  }
+}
+
+.Backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 16;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.menuSmall {
+  width: 30px;
+}
+
+.arrowr {
+  margin-left: 7px;
+}
+
+.arrowl {
+  margin-right: 7px;
+}
+
+.contact-div {
+  text-align: center;
+  border-bottom: 2px solid black;
+  padding: 30px 10px;
+}
+
+input,
+textarea {
+  border: 1px solid black;
+
+  outline: none;
+  font-size: 0.8rem;
+  padding: 0px 5px;
+}
+
+.feed {
+  padding: 10% 0% 5% 0%;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  @include breakpoint(m) {
+    padding: 10% 5% 5% 5%;
+  }
+}
+
+.section {
+  position: relative;
+  transform: scale(0.8);
+  margin: 50px 0px;
+
+  h6 {
+    margin-bottom: 8px;
+  }
+
+  @include breakpoint(m) {
+    transform: scale(1);
+  }
+}
+
+.secl {
+  max-width: 250px;
+  margin-right: 40px;
+}
+
+.football {
+  display: flex;
+}
+
+.pic {
+  width: 200px;
+}
+
+.alice {
+  height: 200px;
+}
+
+.foot5 {
+  width: 200px;
+  top: 0px;
+  left: 0px;
+}
+
+.foot1 {
+  width: 150px;
+  height: 200px;
+}
+
+.photo {
+  margin-left: 20%;
+  @include breakpoint(s) {
+    margin-left: 8%;
+  }
+  @include breakpoint(m) {
+    margin-left: 20%;
+  }
+
+  @include breakpoint(l) {
+    margin-left: 30%;
+  }
+  @include breakpoint(xl) {
+    margin-left: 45%;
+  }
+}
+
+.pasta {
+  width: 200px;
+  height: 200px;
+}
+
+.beaute {
+  width: 150px;
+  height: 250px;
+}
+
+.foot2 {
+  width: 200px;
+  top: 80vh;
+}
+
+.foot3 {
+  width: 300px;
+}
+
+.foot4 {
+  width: 500px;
+
+  margin-left: 20%;
+  @include breakpoint(s) {
+    margin-left: 15%;
+  }
+  @include breakpoint(m) {
+    margin-left: 33%;
+  }
+  @include breakpoint(xl) {
+    margin-left: 35%;
+  }
+}
+
+.foot8 {
+  width: 400px;
+  top: 170vh;
+  left: 23%;
+  @include breakpoint(m) {
+    left: 33%;
+  }
+  @include breakpoint(xl) {
+    left: 43%;
+  }
+}
+
+.foot7 {
+  width: 400px;
+  top: 220vh;
+}
+
+.foot9 {
+  width: 300px;
+  margin-top: 20%;
+}
+
+.m {
+  margin-top: 10%;
+}
+
+.flexi {
+  display: flex;
+  justify-content: space-between;
+
+  width: 70%;
+}
+
+.abs {
+  position: absolute;
+}
+
+.pi {
+  transform: scale(0.6);
+  @include breakpoint(s) {
+    transform: scale(0.8);
+  }
+
+  @include breakpoint(m) {
+    transform: scale(0.9);
+  }
+  @include breakpoint(l) {
+    transform: scale(1);
+  }
+}

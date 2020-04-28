@@ -15,9 +15,6 @@ import asafgrain from "../images/asafgrain.png"
 import nokia from "../images/nokia.png"
 import cv from "../images/CVFEV2020.pdf"
 
-import arrowright from "../images/arrowright.png"
-import arrowleft from "../images/arrowleft.png"
-import arrowdown from "../images/arrowdown.png"
 import underl from "../images/underl.png"
 import smallunderl from "../images/smallunderl.png"
 import smallround from "../images/smallround.png"
@@ -46,11 +43,11 @@ class IndexPage extends Component {
   }
 
   nextStepHandler = e => {
-    if (this.state.step >= 0 && this.state.step < 42) {
+    if (this.state.step >= 0 && this.state.step < 11) {
       this.setState({
         step: this.state.step + 1,
-        l: this.state.l + 5,
-        m: this.state.m + 3,
+        l: this.state.l + 10,
+        m: this.state.m + 7,
       })
     }
   }
@@ -70,8 +67,8 @@ class IndexPage extends Component {
   goBack = () => {
     this.setState({
       step: this.state.step - 1,
-      l: this.state.l - 6,
-      m: this.state.m - 3,
+      l: this.state.l - 10,
+      m: this.state.m - 7,
     })
   }
 
@@ -106,26 +103,24 @@ class IndexPage extends Component {
     txt += " secondes depuis 2013"
 
     return (
-      <Layout>
+      <div>
         <SEO title="Accueil" />
-
         <div onClick={() => this.closePopup()}>
           {this.state.showPopup ? <Popup img={this.state.img} /> : null}{" "}
         </div>
-
         <div className="jauge">
           <div className="dash">
             <svg
-              width="210"
+              width="110"
               height="4"
-              viewBox="0 0 210 4"
+              viewBox="0 0 110 4"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <line
                 x1="1.74846e-07"
                 y1="2"
-                x2="210"
+                x2="110"
                 y2="2.00002"
                 stroke="black"
                 stroke-width="3"
@@ -148,20 +143,19 @@ class IndexPage extends Component {
             </svg>
           </div>
         </div>
-
         <div className="mobilejauge">
           <div className="mobiledash">
             <svg
-              width="126"
+              width="77"
               height="3"
-              viewBox="0 0 126 3"
+              viewBox="0 0 77 3"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <line
                 x1="1.31134e-07"
                 y1="1.5"
-                x2="126"
+                x2="77"
                 y2="1.50001"
                 stroke="black"
                 stroke-width="3"
@@ -184,7 +178,6 @@ class IndexPage extends Component {
             </svg>
           </div>
         </div>
-
         {this.state.step !== 1 ? (
           <div>
             <div
@@ -192,7 +185,7 @@ class IndexPage extends Component {
               onClick={() => this.goBack()}
               onKeyDown={() => this.goBack()}
             ></div>
-            <div className="back" onClick={() => this.goBack()}>
+            {/* <div className="back" onClick={() => this.goBack()}>
               {" "}
               <svg
                 width="56"
@@ -206,10 +199,9 @@ class IndexPage extends Component {
                   fill="black"
                 />
               </svg>
-            </div>
+            </div> */}
           </div>
         ) : null}
-
         <div
           tabIndex="0"
           className="main"
@@ -218,103 +210,69 @@ class IndexPage extends Component {
         >
           <div className="content">
             {this.state.step === 1 ? (
-              <p>
+              <div>
                 {" "}
-                Bonjour, <br /> Cliquez pour découvrir{" "}
-              </p>
-            ) : null}
-            {this.state.step === 2 ||
-            this.state.step === 3 ||
-            this.state.step === 4 ? (
-              <div className="profile">
-                <div className="profile-left">
-                  {this.state.step === 2 ||
-                  this.state.step === 3 ||
-                  this.state.step === 4 ? (
-                    <p> Je suis Anna Bendahan</p>
-                  ) : null}
-
-                  {this.state.step === 4 ? <p> J'ai 24 ans </p> : null}
-                </div>
-
-                {this.state.step === 3 || this.state.step === 4 ? (
-                  <img className="mi" src={mi} alt="mi" />
-                ) : null}
+                <h4>Hello_ </h4> <br /> <p>Cliquez pour découvrir</p>{" "}
               </div>
             ) : null}
-            {this.state.step === 5 || this.state.step === 6 ? (
-              <div>
-                <p>
-                  Je suis développeuse web en freelance depuis 2 ans <br />
-                  <br />
-                </p>
-              </div>
-            ) : null}
-            {this.state.step === 6 ? (
-              <div>
-                <svg
-                  width="4"
-                  height="86"
-                  viewBox="0 0 4 86"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <line
-                    x1="2.5"
-                    y1="85.5"
-                    x2="2.5"
-                    y2="0.5"
-                    stroke="black"
-                    stroke-width="4"
-                  />
-                </svg>
-
-                <p className="short">
-                  <br />
-                  <br />
-                  Je crée tous types de sites internet, du design d’interface
-                  jusqu’au déploiement du site
-                </p>
-              </div>
-            ) : null}
-            {this.state.step === 7 ? (
-              <div>
-                <p>
-                  Comme le site d'
-                  <span className="text">
-                    {" "}
-                    <a href="https://alicethonnier.netlify.com/" target="blank">
-                      Alice Thonnier
-                    </a>
-                  </span>
-                  , styliste et modéliste
-                </p>
-                <div className="asafvid">
-                  <img src={alicemain} alt="alice" />
-                </div>
-                {/* <div class="load">
-                  <img src={load} alt="load" />
-                </div> */}
-              </div>
-            ) : null}
+            {this.state.step === 2 ? <p> Bienvenue sur mon site </p> : null}
+            {this.state.step === 3 ? <p> Je suis Anna Bendahan </p> : null}
+            {this.state.step === 4 ? <p> Vous trouverez ici </p> : null}
+            {this.state.step === 5 ? <p> des projets </p> : null}
+            {this.state.step === 6 ? <p> des photos </p> : null}
+            {this.state.step === 7 ? <p> du foot </p> : null}
+            {this.state.step === 8 ? <p> des inspis </p> : null}
+            {this.state.step === 9 ? <p> & d'autres choses </p> : null}
+            {this.state.step === 10 ? <p>Je vous laisse découvrir</p> : null}
+            {/* {this.state.step === 7 ? (
+              <p> Je fais d'autres choses aussi </p>
+            ) : // <div>
+            //   <p>
+            //     Comme le site d'
+            //     <span className="text">
+            //       {" "}
+            //       <a href="https://alicethonnier.netlify.com/" target="blank">
+            //         Alice Thonnier
+            //       </a>
+            //     </span>
+            //     , styliste et modéliste
+            //   </p>
+            //   <div className="asafvid">
+            //     <img src={alicemain} alt="alice" />
+            //   </div>
+            //   {/* <div class="load">
+            //     <img src={load} alt="load" />
+            //   </div> */}
+            {/* // </div>
+            null}
             {this.state.step === 8 ? (
-              <div>
-                <p>
-                  Ou celui de l’
-                  <span className="text">
-                    <a href="https://jeskieaveclasaf.fr/" target="blank">
-                      ASAF
-                    </a>
-                  </span>
-                  (association de ski d’AIR FRANCE)
-                </p>
+              <p>Je vous laisse découvrir</p>
+            ) : // <div>
+            //   <p>
+            //     Ou celui de l’
+            //     <span className="text">
+            //       <a href="https://jeskieaveclasaf.fr/" target="blank">
+            //         ASAF
+            //       </a>
+            //     </span>
+            //     (association de ski d’AIR FRANCE)
+            //   </p>
 
-                <div className="asafvid">
-                  <img src={asafgrain} alt="asaf" />
-                </div>
+            //   <div className="asafvid">
+            //     <img src={asafgrain} alt="asaf" />
+            //   </div>
+            // </div>
+            null} */}{" "}
+            {this.state.step === 11 ? (
+              <div>
+                <p> Bonne visite ! </p>{" "}
+                <Link to="/first/">
+                  {" "}
+                  <h4> GO</h4>{" "}
+                </Link>
               </div>
             ) : null}
-            <div className="techs">
+            {/* <div className="techs">
               {" "}
               {this.state.step === 9 ||
               this.state.step === 10 ||
@@ -547,7 +505,7 @@ class IndexPage extends Component {
               {this.state.step === 27 ? <p> ...</p> : null}
             </p>
             {/* FOOTBALL */}
-            {this.state.step === 28 ||
+            {/* {this.state.step === 28 ||
             this.state.step === 29 ||
             this.state.step === 30 ||
             this.state.step === 31 ||
@@ -636,7 +594,7 @@ class IndexPage extends Component {
               ) : null}
             </div>
             {/* CONTACT */}
-            {this.state.step === 36 ||
+            {/* {this.state.step === 36 ||
             this.state.step === 37 ||
             this.state.step === 38 ||
             this.state.step === 39 ? (
@@ -684,8 +642,8 @@ class IndexPage extends Component {
                   </svg>
                 </span>
               </p>
-            ) : null}
-            {this.state.step > 41 ? (
+            ) : null} */}
+            {/* {this.state.step > 41 ? (
               <div className="recap">
                 <h1>RÉCAP</h1>
                 <div className="recap-content">
@@ -765,66 +723,10 @@ class IndexPage extends Component {
                   </div>
                 </div>
               </div>
-            ) : null}
+            ) : null} */}
           </div>
-        </div>
-
-        {this.state.step < 42 ? (
-          <div
-            className="footer
-          "
-          >
-            <p onClick={() => this.goEndHandler()}>
-              <span>Aller directement à la fin </span>{" "}
-              <span className="dash2">
-                <svg
-                  width="42"
-                  height="14"
-                  viewBox="0 0 42 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <line
-                    x1="6"
-                    y1="6.5"
-                    x2="58"
-                    y2="7.5"
-                    stroke="black"
-                    stroke-width="3"
-                  />
-                </svg>
-              </span>
-            </p>
-          </div>
-        ) : (
-          <div
-            className="footer
-          "
-          >
-            <p onClick={() => this.resetHandler()}>
-              <span className="dash2">
-                <svg
-                  width="42"
-                  height="14"
-                  viewBox="0 0 42 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <line
-                    x1="6"
-                    y1="6.5"
-                    x2="58"
-                    y2="7.5"
-                    stroke="black"
-                    stroke-width="3"
-                  />
-                </svg>
-              </span>
-              recommencer
-            </p>
-          </div>
-        )}
-      </Layout>
+        </div>{" "}
+      </div>
     )
   }
 }
