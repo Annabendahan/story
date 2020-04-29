@@ -42,18 +42,7 @@ class ProjectLayout extends Component {
             transition: "transform 1s cubic-bezier(0.82, 0.0, 0.18, 1.0)",
           }}
         >
-          <div
-            className="project-layout__content"
-            style={{
-              transform: this.state.mounted
-                ? "translateX(0vh)"
-                : "translateX(100vw)",
-              transition: "transform 1s cubic-bezier(0.82, 0.0, 0.18, 1.0)",
-            }}
-          >
-            <div> {this.props.ill} </div>
-            <p>{this.props.text}</p>
-          </div>
+          <div className="project-layout__content">{this.props.content}</div>
         </div>
       </div>
     )

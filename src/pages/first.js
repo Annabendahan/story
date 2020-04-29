@@ -15,9 +15,11 @@ class First extends Component {
     project: 1,
     scroll: 0,
     away: false,
+    mounted: false,
   }
 
   componentDidMount() {
+    this.setState({ mounted: true })
     window.addEventListener("scroll", this.handleScroll, { passive: true })
   }
 
@@ -50,7 +52,35 @@ class First extends Component {
   render() {
     let project = (
       <ProjectLayout
-        ill=<img src={mi} alt="" />
+        content=<div className="box box__left">
+          <div
+            style={{
+              transform: this.state.mounted
+                ? "translateX(0vh)"
+                : "translateX(100vw)",
+              transition: "transform 1s cubic-bezier(0.82, 0.0, 0.18, 1.0)",
+            }}
+          >
+            {" "}
+            <img src={mi} alt="" />
+          </div>
+          <div
+            style={{
+              transform: this.state.mounted
+                ? "translateX(0vh)"
+                : "translateX(100vw)",
+              transition: "transform .5s cubic-bezier(0.82, 0.0, 0.18, 1.0)",
+            }}
+            className="box__text"
+          >
+            <h3> Hello</h3>
+            <p>
+              {" "}
+              Welcome to my portfolio. I am Anna Bendahan, a freelance developer
+              based in paris. I design & build websites.
+            </p>
+          </div>
+        </div>
         line=<div className="line">
           <svg
             width="1440"
@@ -62,8 +92,6 @@ class First extends Component {
             <path d="M-535 1L1922 0.999785" stroke="black" />
           </svg>
         </div>
-        text="Welcome on my portfolio. I am Anna Bendahan, I design & build
-          websites."
       />
     )
 

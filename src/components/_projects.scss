@@ -1,49 +1,93 @@
 .project-layout {
   height: 93vh;
   width: 100vw;
-  overflow-y: hidden;
+  overflow: hidden !important;
   position: relative;
-  background: red;
 
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
 
-  &__content {
-    background: grey;
-    display: flex;
-    justify-content: space-between;
-    img {
-      max-width: 30vw;
-      max-height: 30vw;
-    }
-    p {
-      max-width: 40vw;
+  &__description {
+    max-width: 40vw;
+    margin: 20px;
 
-      @include breakpoint(s) {
-        max-width: 20vw;
-        margin: 60px 30px 0px 60px;
-      }
+    @include breakpoint(s) {
+      max-width: 30vw;
     }
+  }
+
+  &__content {
   }
 }
 
 .line {
   position: absolute;
   top: 50%;
+  @include breakpoint(m) {
+    top: 70%;
+  }
 }
 
 .linestart {
   position: absolute;
   top: 50%;
   left: 50%;
+  @include breakpoint(m) {
+    top: 70%;
+  }
+
+  h4 {
+    margin-bottom: -10px;
+  }
 }
 
 .start-text {
-  position: absolute;
-  top: 10% !important;
+  position: absolute !important;
+  top: -55% !important;
   left: 50%;
   margin: 0px !important;
   width: 300px !important;
+  @include breakpoint(m) {
+    top: -5% !important;
+  }
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include breakpoint(m) {
+    flex-direction: row;
+  }
+
+  &__left {
+  }
+  img {
+    max-width: 45vw;
+    max-height: 60vh;
+
+    @include breakpoint(m) {
+      max-width: 35vw;
+      max-height: 50vh;
+    }
+  }
+
+  &__text {
+    z-index: -1;
+    max-width: 70vw;
+
+    @include breakpoint(m) {
+      max-width: 30vw;
+      max-height: 50vh;
+      margin: 30px 70px 0px 70px;
+    }
+  }
+}
+
+.code-count {
+  box-sizing: border-box;
+  width: 300px;
+  margin-top: -300px;
 }

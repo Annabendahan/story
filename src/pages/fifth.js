@@ -8,16 +8,18 @@ import ProjectLayout from "../components/project-layout"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import iphone from "../images/mockup-alice.png"
+import terrain from "../images/terr3.png"
 
-class Fourth extends Component {
+class Fifth extends Component {
   state = {
     project: 1,
     scroll: 0,
     away: false,
+    mounted: false,
   }
 
   componentDidMount() {
+    this.setState({ mounted: true })
     window.addEventListener("scroll", this.handleScroll, { passive: true })
   }
 
@@ -39,7 +41,7 @@ class Fourth extends Component {
   }
 
   handleNextPage() {
-    navigate("/fifth/")
+    navigate("/sixth/")
   }
 
   handleProject() {
@@ -50,13 +52,29 @@ class Fourth extends Component {
   render() {
     let project = (
       <ProjectLayout
-        content=<div className="box__text">
-          <h3> Work again </h3>
-          <p>
-            I also created a website for Quentin Mameri, a lawyer & for the ski
-            association of Air France, I designed visuals for rentman, I helped
-            on Cargo & Wordpress websites...
-          </p>
+        content=<div className="box box__right">
+          <div
+            style={{
+              transform: this.state.mounted
+                ? "translateX(0vh)"
+                : "translateX(100vw)",
+              transition: "transform .5s cubic-bezier(0.82, 0.0, 0.18, 1.0)",
+            }}
+            className="box__text"
+          >
+            <h3>Football</h3>
+            <p>Beside designing & coding, I play football @usparisxifeminime</p>
+          </div>
+          <div
+            style={{
+              transform: this.state.mounted
+                ? "translateX(0vh)"
+                : "translateX(100vw)",
+              transition: "transform 1s cubic-bezier(0.82, 0.0, 0.18, 1.0)",
+            }}
+          >
+            <img src={terrain} alt="terrain" />
+          </div>
         </div>
         line=<div className="line">
           <svg
@@ -81,4 +99,4 @@ class Fourth extends Component {
   }
 }
 
-export default Fourth
+export default Fifth

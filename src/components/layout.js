@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
     <>
       <div>
         <div className="header">
-          <p>
+          <h4>
             PORTFOLIO
             <svg
               className="dash-thin"
@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
                 stroke-width="0.5"
               />
             </svg>
-          </p>
+          </h4>
         </div>
         <main>{children}</main>
       </div>

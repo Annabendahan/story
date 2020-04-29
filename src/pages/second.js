@@ -17,10 +17,19 @@ class Second extends Component {
     project: 1,
     scroll: 0,
     away: false,
+    lines: 32783,
+    mounted: false,
   }
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll, { passive: true })
+    this.setState({ mounted: true })
+    setInterval(
+      function() {
+        this.setState({ lines: this.state.lines + 1 })
+      }.bind(this),
+      1000
+    )
   }
 
   componentWillUnmount() {
@@ -52,7 +61,35 @@ class Second extends Component {
   render() {
     let project = (
       <ProjectLayout
-        img=""
+        content=<div className="box box__right">
+          <div
+            style={{
+              transform: this.state.mounted
+                ? "translateX(0vh)"
+                : "translateX(100vw)",
+              transition: "transform .5s cubic-bezier(0.82, 0.0, 0.18, 1.0)",
+            }}
+            className="box__text"
+          >
+            <h3>Background</h3>
+            <p>
+              After studiying business law, I decided to learn to code. I worked
+              in a digital agency and now I am a freelance designer & developer.
+            </p>
+          </div>
+          <div
+            style={{
+              transform: this.state.mounted
+                ? "translateX(0vh)"
+                : "translateX(100vw)",
+              transition: "transform 1s cubic-bezier(0.82, 0.0, 0.18, 1.0)",
+            }}
+            className="code-count"
+          >
+            <h5>{this.state.lines}</h5>
+            <p> LINES OF CODE</p>
+          </div>{" "}
+        </div>
         line=<div className="line">
           <svg
             width="1440"
@@ -64,7 +101,6 @@ class Second extends Component {
             <path d="M-535 1L1922 0.999785" stroke="black" />
           </svg>
         </div>
-        text="After studiying business law, i decided to learn to code. I worked in a digital agency and now i am a freelance designer & developer."
       />
     )
 

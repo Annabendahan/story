@@ -48,9 +48,7 @@ class Start extends Component {
   }
 
   render() {
-    let project = (
-      <ProjectLayout text=<p className="start-text"> "SCROLL TO START"</p> />
-    )
+    let project = <ProjectLayout />
 
     return (
       <Layout>
@@ -64,14 +62,15 @@ class Start extends Component {
             transition: "transform 1s cubic-bezier(0.82, 0.0, 0.18, 1.0)",
           }}
         >
+          <h4>SCROLL TO START</h4>
           <svg
-            width="3440"
-            height="1"
-            viewBox="0 0 3440 1"
+            width="4983"
+            height="2"
+            viewBox="0 0 4983 2"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M-535 1L1922 0.999785" stroke="black" />
+            <path d="M0 1L4983 1.00044" stroke="black" />
           </svg>
         </div>
         <div onWheel={() => this.handleScroll()}>{project}</div>
