@@ -19,11 +19,17 @@
   }
 
   &__content {
+    @include breakpoint(xl) {
+      max-width: 90%;
+      min-width: 70%;
+      margin: auto;
+    }
   }
 }
 
 .line {
   position: absolute;
+
   top: 50%;
   @include breakpoint(m) {
     top: 70%;
@@ -38,8 +44,25 @@
     top: 70%;
   }
 
-  h4 {
-    margin-bottom: -10px;
+  h3 {
+    margin-top: -30px;
+  }
+}
+
+.lineend {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  display: flex;
+  @include breakpoint(m) {
+    top: 70%;
+    right: 50%;
+  }
+
+  h3 {
+    margin-top: -7px;
+    margin-left: -180px;
+    width: 250px;
   }
 }
 
@@ -58,27 +81,50 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  @include breakpoint(m) {
+  justify-content: space-between;
+
+  @include breakpoint(xl) {
     flex-direction: row;
+    width: 80%;
+    margin: auto;
   }
 
   &__left {
   }
   img {
-    max-width: 45vw;
-    max-height: 60vh;
+    max-width: 70vw;
+
+    @include breakpoint(s) {
+      max-width: 65vw;
+    }
 
     @include breakpoint(m) {
-      max-width: 35vw;
-      max-height: 50vh;
+      max-width: 65vw;
+      max-height: 55vh;
+    }
+
+    @include breakpoint(l) {
+      max-width: 55vw;
+    }
+    @include breakpoint(xxl) {
+      max-width: 65vw;
+      max-height: 75vh;
     }
   }
 
   &__text {
     z-index: -1;
     max-width: 70vw;
+    margin-top: 30px;
+    @include breakpoint(s) {
+      max-width: 65vw;
+    }
 
-    @include breakpoint(m) {
+    @include breakpoint(l) {
+      max-width: 55vw;
+    }
+
+    @include breakpoint(xl) {
       max-width: 30vw;
       max-height: 50vh;
       margin: 30px 70px 0px 70px;
@@ -89,5 +135,34 @@
 .code-count {
   box-sizing: border-box;
   width: 300px;
-  margin-top: -300px;
+  margin: 80px;
+  margin-left: 200px;
+  @include breakpoint(s) {
+    margin-top: 220px;
+    margin-left: 200px;
+  }
+
+  @include breakpoint(m) {
+    position: relative;
+    margin-top: -300px;
+    margin-left: 20px;
+  }
+}
+
+.terrain {
+  max-width: 80vw !important;
+  margin-top: 50px;
+  @include breakpoint(s) {
+    margin-top: 70px;
+  }
+  @include breakpoint(m) {
+    margin-top: 0px;
+  }
+}
+
+.nokia {
+  margin-top: 50px;
+  @include breakpoint(m) {
+    margin-top: 0px;
+  }
 }

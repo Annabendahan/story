@@ -213,7 +213,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  cursor: url("../images/mediumround.png"), auto;
+  cursor: url("../images/mouse.svg"), auto;
 }
 img {
   max-width: 100%;
@@ -270,10 +270,10 @@ h3 {
   margin-bottom: 1.45rem;
 
   font-family: "Work Sans", sans-serif;
-  font-weight: 600;
+  font-weight: 300;
   color: black;
   text-rendering: optimizeLegibility;
-  font-size: 1.1316rem;
+  font-size: 1rem;
   line-height: 1.1;
 }
 h4 {
@@ -287,9 +287,9 @@ h4 {
   margin-bottom: 1.45rem;
   color: inherit;
   font-family: work sans;
-  font-weight: 400;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   line-height: 1.1;
 }
 h5 {
@@ -321,7 +321,7 @@ h6 {
   color: inherit;
 
   font-family: "Work Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 0.8405rem;
   line-height: 1.1;
@@ -391,8 +391,8 @@ p {
   padding-top: 0;
 
   margin-bottom: 1.45rem;
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 1.1rem;
+  font-weight: 300;
   color: black;
   .dash-thin {
     margin: 0px 5px 5px 5px !important;
@@ -636,9 +636,46 @@ pre tt:after {
 
 .header {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  width: 98%;
+  margin: auto;
   font-size: 1rem;
   margin-top: 2vh;
   font-weight: 300 !important;
+}
+
+.goback {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+
+  padding: 10px;
+  h4 {
+    margin-bottom: 5px;
+  }
+  svg {
+    margin-top: 5px;
+  }
+}
+
+.pagi {
+  padding: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h4 {
+    margin-bottom: 5px;
+  }
+  h6 {
+    margin-bottom: 5px;
+  }
+  svg {
+    margin: 5px 10px 10px 10px;
+  }
+}
+
+a {
+  color: black;
 }

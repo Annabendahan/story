@@ -8,17 +8,17 @@ import ProjectLayout from "../components/project-layout"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import mi from "../images/IMG_4473.jpg"
-
 class Start extends Component {
   state = {
     project: 1,
     scroll: 0,
     away: false,
+    mounted: false,
   }
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll, { passive: true })
+    this.setState({ mounted: true })
   }
 
   componentWillUnmount() {
@@ -33,13 +33,13 @@ class Start extends Component {
         function() {
           this.handleNextPage()
         }.bind(this),
-        1300
+        1500
       )
     }
   }
 
   handleNextPage() {
-    navigate("/first/")
+    navigate("/one/")
   }
 
   handleProject() {
@@ -52,7 +52,7 @@ class Start extends Component {
 
     return (
       <Layout>
-        <SEO title="Projects" />
+        <SEO title="1" />
         <div
           className="linestart"
           style={{
@@ -62,16 +62,25 @@ class Start extends Component {
             transition: "transform 1s cubic-bezier(0.82, 0.0, 0.18, 1.0)",
           }}
         >
-          <h4>SCROLL TO START</h4>
-          <svg
-            width="4983"
-            height="2"
-            viewBox="0 0 4983 2"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            style={{
+              transform: this.state.mounted
+                ? "translateX(0vw)"
+                : "translateX(100vh)",
+              transition: "transform 1s cubic-bezier(0.82, 0.0, 0.18, 1.0)",
+            }}
           >
-            <path d="M0 1L4983 1.00044" stroke="black" />
-          </svg>
+            <svg
+              width="4267"
+              height="1"
+              viewBox="0 0 4267 1"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0 1L4267 0.999627" stroke="black" />
+            </svg>
+            <h3>SCROLL TO START</h3>
+          </div>
         </div>
         <div onWheel={() => this.handleScroll()}>{project}</div>
       </Layout>
