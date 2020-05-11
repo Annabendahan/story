@@ -8,16 +8,18 @@ import ProjectLayout from "../components/project-layout"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import iphone from "../images/mockup-alice.png"
+import childhood from "../images/childhood.mp4"
 
-class Fourth extends Component {
+class Childhood extends Component {
   state = {
     project: 1,
     scroll: 0,
     away: false,
+    mounted: false,
   }
 
   componentDidMount() {
+    this.setState({ mounted: true })
     window.addEventListener("scroll", this.handleScroll, { passive: true })
   }
 
@@ -39,7 +41,7 @@ class Fourth extends Component {
   }
 
   handleNextPage() {
-    navigate("/five/")
+    navigate("/studies/")
   }
 
   handleProject() {
@@ -50,23 +52,34 @@ class Fourth extends Component {
   render() {
     let project = (
       <ProjectLayout
-        content=<div className="box__text">
-          <p>
-            I ALSO CREATED A WEBSITE FOR{" "}
-            <b>
-              <a href="http://www.qm-avocat.com/" target="blank">
-                QUENTIN MAMERI
-              </a>
-            </b>
-            , A LAWYER & FOR THE{" "}
-            <b>
-              <a href="https://jeskieaveclasaf.fr/" target="blank">
-                SKI ASSOCIATION
-              </a>
-            </b>{" "}
-            OF AIR FRANCE, I DESIGNED VISUALS FOR RENTMAN, I HELPED ON CARGO &
-            WORDPRESS WEBSITES...
-          </p>
+        content=<div className="box box__right">
+          <div
+            style={{
+              transform: this.state.mounted
+                ? "translateX(0vh)"
+                : "translateX(100vw)",
+              transition: "transform .5s cubic-bezier(0.82, 0.0, 0.18, 1.0)",
+            }}
+            className="box__text"
+          >
+            <p>
+              LET ME INTRODUCE MYSELF. I GREW UP IN FRANCE AND IT LOOKS LIKE
+              CHILDHOOD WAS NICE
+            </p>
+          </div>
+          <div
+            style={{
+              transform: this.state.mounted
+                ? "translateX(0vh)"
+                : "translateX(100vw)",
+              transition: "transform 1s cubic-bezier(0.72, 0.0, 0.28, 1.0)",
+            }}
+          >
+            <video muted autoPlay loop playsInline>
+              <source src={childhood} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
         line=<div className="line">
           <svg
@@ -91,4 +104,4 @@ class Fourth extends Component {
   }
 }
 
-export default Fourth
+export default Childhood

@@ -21,22 +21,26 @@ class Layout extends Component {
       <>
         <div>
           <div className="header">
-            <div className="goback" onClick={() => this.handleReturn()}>
-              <svg
-                width="30"
-                height="4"
-                viewBox="0 0 30 4"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.823223 1.82322C0.725592 1.92085 0.725592 2.07915 0.823223 2.17678L2.41421 3.76777C2.51184 3.8654 2.67014 3.8654 2.76777 3.76777C2.8654 3.67014 2.8654 3.51184 2.76777 3.41421L1.35355 2L2.76777 0.585786C2.8654 0.488155 2.8654 0.329864 2.76777 0.232233C2.67014 0.134602 2.51184 0.134602 2.41421 0.232233L0.823223 1.82322ZM30 1.75L1 1.75V2.25L30 2.25V1.75Z"
-                  fill="black"
-                />
-              </svg>
+            {this.props.children[0].props.title != 1 ? (
+              <div className="goback" onClick={() => this.handleReturn()}>
+                <svg
+                  width="30"
+                  height="4"
+                  viewBox="0 0 30 4"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.823223 1.82322C0.725592 1.92085 0.725592 2.07915 0.823223 2.17678L2.41421 3.76777C2.51184 3.8654 2.67014 3.8654 2.76777 3.76777C2.8654 3.67014 2.8654 3.51184 2.76777 3.41421L1.35355 2L2.76777 0.585786C2.8654 0.488155 2.8654 0.329864 2.76777 0.232233C2.67014 0.134602 2.51184 0.134602 2.41421 0.232233L0.823223 1.82322ZM30 1.75L1 1.75V2.25L30 2.25V1.75Z"
+                    fill="black"
+                  />
+                </svg>
 
-              <h4>BACK</h4>
-            </div>
+                <h4>BACK</h4>
+              </div>
+            ) : (
+              <div> </div>
+            )}
             <div className="pagi">
               <h6>PORTFOLIO</h6>
               <svg
@@ -61,6 +65,7 @@ class Layout extends Component {
               </b>
             </div>
           </div>
+
           <main>{this.props.children}</main>
         </div>
       </>

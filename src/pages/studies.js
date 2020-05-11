@@ -8,9 +8,9 @@ import ProjectLayout from "../components/project-layout"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import c from "../images/christines.png"
+import childhood from "../images/childhood.mp4"
 
-class Sixth extends Component {
+class Studies extends Component {
   state = {
     project: 1,
     scroll: 0,
@@ -41,7 +41,7 @@ class Sixth extends Component {
   }
 
   handleNextPage() {
-    navigate("/seven/")
+    navigate("/rentman/")
   }
 
   handleProject() {
@@ -52,18 +52,7 @@ class Sixth extends Component {
   render() {
     let project = (
       <ProjectLayout
-        content=<div className="box box__left">
-          <div
-            style={{
-              transform: this.state.mounted
-                ? "translateX(0vh)"
-                : "translateX(100vw)",
-              transition: "transform 1s cubic-bezier(0.82, 0.0, 0.18, 1.0)",
-            }}
-          >
-            {" "}
-            <img src={c} alt="" />
-          </div>
+        content=<div className="box box__right">
           <div
             style={{
               transform: this.state.mounted
@@ -74,9 +63,8 @@ class Sixth extends Component {
             className="box__text"
           >
             <p>
-              {" "}
-              & I DO <b>FILM PHOTOGRAPHY</b> (FILM DEVELOPPING & TRADITIONNAL
-              PRINTING PROCESS)
+              I STUDIED BUSINESS LAW IN PARIS DAUPHINE BUT REALISED THAT I
+              WANTED TO WORK IN A MORE CREATIVE FIELD{" "}
             </p>
           </div>
         </div>
@@ -96,11 +84,11 @@ class Sixth extends Component {
 
     return (
       <Layout>
-        <SEO title="7" />
+        <SEO title="5" />
         <div onWheel={() => this.handleScroll()}>{project}</div>
       </Layout>
     )
   }
 }
 
-export default Sixth
+export default Studies

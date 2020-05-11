@@ -8,9 +8,11 @@ import ProjectLayout from "../components/project-layout"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import terrain from "../images/MHILSZ.png"
+import mi from "../images/me.jpg"
+import mi2 from "../images/me2.jpg"
+import mi3 from "../images/me3.jpg"
 
-class Fifth extends Component {
+class Presentation extends Component {
   state = {
     project: 1,
     scroll: 0,
@@ -41,7 +43,7 @@ class Fifth extends Component {
   }
 
   handleNextPage() {
-    navigate("/six/")
+    navigate("/childhood/")
   }
 
   handleProject() {
@@ -52,7 +54,18 @@ class Fifth extends Component {
   render() {
     let project = (
       <ProjectLayout
-        content=<div className="box box__right">
+        content=<div className="box box__left">
+          <div
+            style={{
+              transform: this.state.mounted
+                ? "translateX(0vh)"
+                : "translateX(100vw)",
+              transition: "transform 1s cubic-bezier(0.82, 0.0, 0.18, 1.0)",
+            }}
+          >
+            {" "}
+            <img src={mi} alt="" />
+          </div>
           <div
             style={{
               transform: this.state.mounted
@@ -63,37 +76,21 @@ class Fifth extends Component {
             className="box__text"
           >
             <p>
-              APART FROM CODING, I PLAY FOOTBALL IN PARIS 20{" "}
-              <b>
-                <a
-                  href="https://www.instagram.com/usparisxifeminine/"
-                  target="blank"
-                >
-                  @USPARISXIFEMINIME
-                </a>
-              </b>
+              {" "}
+              WELCOME TO MY WEBSITE. I AM ANNA BENDAHAN, A FREELANCE DEVELOPER
+              BASED IN PARIS. <b>I DESIGN & BUILD WEBSITES.</b>
             </p>
-          </div>
-          <div
-            style={{
-              transform: this.state.mounted
-                ? "translateX(0vh)"
-                : "translateX(100vw)",
-              transition: "transform 1s cubic-bezier(0.72, 0.0, 0.28, 1.0)",
-            }}
-          >
-            <img className="terrain" src={terrain} alt="terrain" />
           </div>
         </div>
         line=<div className="line">
           <svg
-            width="1440"
+            width="4267"
             height="1"
-            viewBox="0 0 1440 1"
+            viewBox="0 0 4267 1"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M-535 1L1922 0.999785" stroke="black" />
+            <path d="M0 1L4267 0.999627" stroke="black" />
           </svg>
         </div>
       />
@@ -101,11 +98,11 @@ class Fifth extends Component {
 
     return (
       <Layout>
-        <SEO title="6" />
+        <SEO title="2" />
         <div onWheel={() => this.handleScroll()}>{project}</div>
       </Layout>
     )
   }
 }
 
-export default Fifth
+export default Presentation

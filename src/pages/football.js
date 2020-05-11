@@ -8,23 +8,38 @@ import ProjectLayout from "../components/project-layout"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import nokia from "../images/nokia.png"
+import f1 from "../images/MHILSZ2.png"
+import f2 from "../images/foot7.jpg"
+import f4 from "../images/foot18.jpg"
 
-class Seven extends Component {
+import f3 from "../images/foot10.png"
+
+class Football extends Component {
   state = {
     project: 1,
     scroll: 0,
     away: false,
     mounted: false,
+    pic: 1,
   }
 
   componentDidMount() {
     this.setState({ mounted: true })
     window.addEventListener("scroll", this.handleScroll, { passive: true })
+    setInterval(
+      function() {
+        this.handleNextPhoto()
+      }.bind(this),
+      500
+    )
   }
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll)
+  }
+
+  handleNextPhoto() {
+    this.setState({ pic: this.state.pic + 1 })
   }
 
   handleScroll = e => {
@@ -41,7 +56,7 @@ class Seven extends Component {
   }
 
   handleNextPage() {
-    navigate("/end/")
+    navigate("/photography/")
   }
 
   handleProject() {
@@ -50,9 +65,33 @@ class Seven extends Component {
   }
 
   render() {
+    let pic = f1
+
+    if (this.state.pic == 1) {
+      pic = f1
+    } else if (this.state.pic == 2) {
+      pic = f2
+    } else if (this.state.pic == 3) {
+      pic = f3
+    } else if (this.state.pic == 4) {
+      pic = f4
+    } else if (this.state.pic == 5) {
+      this.setState({ pic: 1 })
+    }
+
     let project = (
       <ProjectLayout
         content=<div className="box box__right">
+          <div
+            style={{
+              transform: this.state.mounted
+                ? "translateX(0vh)"
+                : "translateX(100vw)",
+              transition: "transform 1s cubic-bezier(0.72, 0.0, 0.28, 1.0)",
+            }}
+          >
+            <img className="terrain" src={f1} alt="terrain" />
+          </div>
           <div
             style={{
               transform: this.state.mounted
@@ -63,26 +102,16 @@ class Seven extends Component {
             className="box__text"
           >
             <p>
-              YOU HAVE A PROJECT IN MIND? CONTACT ME AT{" "}
-              <b>AN.BENDAHAN@GMAIL.COM</b> OR
-              <b> 0659133919</b>; AND FOLLOW ME HERE{" "}
+              APART FROM CODING, I PLAY FOOTBALL IN PARIS 20{" "}
               <b>
-                <a href="https://www.instagram.com/lebendan/" target="blank">
-                  @LEBENDAN
+                <a
+                  href="https://www.instagram.com/usparisxifeminine/"
+                  target="blank"
+                >
+                  @USPARISXIFEMINIME
                 </a>
-              </b>{" "}
-              ;)
+              </b>
             </p>
-          </div>
-          <div
-            style={{
-              transform: this.state.mounted
-                ? "translateX(0vh)"
-                : "translateX(100vw)",
-              transition: "transform 1s cubic-bezier(0.82, 0.0, 0.18, 1.0)",
-            }}
-          >
-            <img className="nokia" src={nokia} alt="nokia" />
           </div>
         </div>
         line=<div className="line">
@@ -101,11 +130,11 @@ class Seven extends Component {
 
     return (
       <Layout>
-        <SEO title="8" />
+        <SEO title="6" />
         <div onWheel={() => this.handleScroll()}>{project}</div>
       </Layout>
     )
   }
 }
 
-export default Seven
+export default Football

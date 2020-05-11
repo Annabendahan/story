@@ -8,20 +8,28 @@ import ProjectLayout from "../components/project-layout"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import alice from "../images/alice3.png"
-import alicevid from "../images/alicevid.mp4"
+import d2 from "../images/d2.png"
+import a2 from "../images/alice2.png"
+import a3 from "../images/alice3.png"
 
-class Third extends Component {
+class Rentman extends Component {
   state = {
     project: 1,
     scroll: 0,
     away: false,
+    lines: 32783,
     mounted: false,
   }
 
   componentDidMount() {
-    this.setState({ mounted: true })
     window.addEventListener("scroll", this.handleScroll, { passive: true })
+    this.setState({ mounted: true })
+    setInterval(
+      function() {
+        this.setState({ lines: this.state.lines + 1 })
+      }.bind(this),
+      1000
+    )
   }
 
   componentWillUnmount() {
@@ -42,7 +50,7 @@ class Third extends Component {
   }
 
   handleNextPage() {
-    navigate("/four/")
+    navigate("/barcelona/")
   }
 
   handleProject() {
@@ -53,21 +61,7 @@ class Third extends Component {
   render() {
     let project = (
       <ProjectLayout
-        content=<div className="box box__left">
-          <div
-            style={{
-              transform: this.state.mounted
-                ? "translateX(0vh)"
-                : "translateX(100vw)",
-              transition: "transform 1s cubic-bezier(0.82, 0.0, 0.18, 1.0)",
-            }}
-          >
-            {" "}
-            {/* <video playsInline autoPlay muted width="250">
-              <source src={alicevid} type="video/mp4" />
-            </video> */}
-            <img src={alice} alt="" />
-          </div>
+        content=<div className="box box__right">
           <div
             style={{
               transform: this.state.mounted
@@ -78,16 +72,20 @@ class Third extends Component {
             className="box__text"
           >
             <p>
-              I CREATED A WEBSITE FOR{" "}
-              <b>
-                <a href="https://alicethonnier.netlify.app/" target="blank">
-                  ALICE THONNIER
-                </a>
-              </b>
-              , A STYLIST & PATTERN MAKER, TO SHOW HER BRAND AND HER DIFFERENT
-              COLLECTIONS.
+              THUS, I DID AN INTERNSHIP IN DIGITAL MARKETING IN UTRECHT.{" "}
+              <b>I LIKED THE DESIGN PART</b>, BUT WANTED TO GO FURTHER.
             </p>
           </div>
+          <div
+            style={{
+              transform: this.state.mounted
+                ? "translateX(0vh)"
+                : "translateX(100vw)",
+              transition: "transform 1s cubic-bezier(0.82, 0.0, 0.18, 1.0)",
+            }}
+          >
+            <img src={d2} alt="cc" />
+          </div>{" "}
         </div>
         line=<div className="line">
           <svg
@@ -105,11 +103,11 @@ class Third extends Component {
 
     return (
       <Layout>
-        <SEO title="4" />
+        <SEO title="3" />
         <div onWheel={() => this.handleScroll()}>{project}</div>
       </Layout>
     )
   }
 }
 
-export default Third
+export default Rentman

@@ -39,7 +39,7 @@ class Start extends Component {
   }
 
   handleNextPage() {
-    navigate("/one/")
+    navigate("/presentation/")
   }
 
   handleProject() {
@@ -79,7 +79,7 @@ class Start extends Component {
             >
               <path d="M0 1L4267 0.999627" stroke="black" />
             </svg>
-            <h3>SCROLL TO START</h3>
+            <h4>SCROLL TO START</h4>
           </div>
         </div>
         <div onWheel={() => this.handleScroll()}>{project}</div>

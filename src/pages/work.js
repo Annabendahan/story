@@ -8,11 +8,11 @@ import ProjectLayout from "../components/project-layout"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import a1 from "../images/alice1.png"
+import d2 from "../images/d2.png"
 import a2 from "../images/alice2.png"
 import a3 from "../images/alice3.png"
 
-class Second extends Component {
+class Work extends Component {
   state = {
     project: 1,
     scroll: 0,
@@ -50,7 +50,7 @@ class Second extends Component {
   }
 
   handleNextPage() {
-    navigate("/three/")
+    navigate("/football/")
   }
 
   handleProject() {
@@ -72,9 +72,9 @@ class Second extends Component {
             className="box__text"
           >
             <p>
-              AFTER STUDIYING BUSINESS LAW, I DECIDED TO <b>LEARN TO CODE.</b> I
-              WORKED IN A DIGITAL AGENCY AND{" "}
-              <b>NOW I AM A FREELANCE WEB DESIGNER & DEVELOPER.</b>
+              I ALSO CREATED A WEBSITE FOR QUENTIN MAMERI, A LAWYER & FOR THE
+              SKI ASSOCIATION OF AIR FRANCE, I HELPED ON CARGO & WORDPRESS
+              WEBSITES...
             </p>
           </div>
           <div
@@ -86,8 +86,8 @@ class Second extends Component {
             }}
             className="code-count"
           >
-            <h5>{this.state.lines}</h5>
-            <p> LINES OF CODE</p>
+            <h5> {this.state.lines}</h5>
+            <h3>LINES OF CODE</h3>
           </div>{" "}
         </div>
         line=<div className="line">
@@ -113,4 +113,4 @@ class Second extends Component {
   }
 }
 
-export default Second
+export default Work
